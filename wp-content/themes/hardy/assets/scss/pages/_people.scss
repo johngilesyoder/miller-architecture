@@ -1,0 +1,109 @@
+// people.scss
+// -----------------------------------------------------------------
+
+.page-the-team {
+  .people-summary {
+    margin: 0 0 60px;
+  }
+  .bio {
+    margin: 0 0 60px;
+    img {
+      width: 100%;
+    }
+    h2 {
+      font-size: 21px;
+      margin: 0 0 30px;
+      font-family: $font-family-sans-serif;
+      font-weight: 500;
+      .person-title {
+        font-size: 16px;
+        font-weight: 300;
+        letter-spacing: 1.1px;
+        text-transform: uppercase;
+        color: #999;
+        margin-left: 3px;
+      }
+    }
+  }
+}
+
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .page-people {
+    .bio {
+      img {
+        margin: 0 0 30px;
+        max-width: 250px;
+      }
+      h2 {
+        .person-title {
+          display: block;
+          margin-left: 0;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+
+}
+
+// Up to tablet
+@media (max-width: 767px) {
+
+  .page-people {
+    .people-summary {
+      margin: 0 0 30px;
+    }
+    .bio {
+      img {
+        margin: 0 0 15px;
+        max-width: 250px;
+      }
+      h2 {
+        font-size: 21px;
+        margin: 0 0 15px;
+        .person-title {
+          display: block;
+          margin-left: 0;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+
+}
+
+// Up to landscape phone
+@media (max-width: 480px) {
+
+  .page-people {
+    .flexslider {
+      display: none;
+    }
+    .people-summary {
+      margin: 0 0 30px;
+    }
+    .bio {
+      margin: 0 0 30px;
+      img {
+        margin: 0 0 15px;
+      }
+      h2 {
+        font-size: 21px;
+        margin: 0 0 15px;
+      }
+    }
+  }
+
+}

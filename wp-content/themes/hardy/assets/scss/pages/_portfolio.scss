@@ -1,0 +1,160 @@
+// portfolio.scss
+// -----------------------------------------------------------------
+
+.post-type-archive-portfolio,
+.tax-portfolio-category {
+  .portfolio-categories-dropdown {
+    font-family: $font-family-sans-serif;
+    margin: -15px 0 30px;
+  }
+  .portfolio-categories {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: right;
+    li {
+      display: inline-block;
+      margin: 0 5px 0 0;
+      a {
+        border: 1px solid #e6e6e6;
+        display: block;
+        text-decoration: none;
+        font-family: $font-family-sans-serif;
+        font-size: 13px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        padding: 9px 15px;
+      }
+      &.current-cat a {
+        background: #000;
+        color: #fff;
+        border-color: #000;
+      }
+    }
+  }
+  .archive-description {
+    margin: 0 0 50px;
+    p {
+      margin: 0;
+    }
+  }
+  .page-title {
+    @include clearfix;
+    h1 {
+      float: left;
+    }
+  }
+  .features-dropdown {
+    float: right;
+    font-family: $font-family-sans-serif;
+    form {
+      label {
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        display: inline-block;
+      }
+      select {
+        width: 345px;
+        display: inline-block;
+        box-shadow: none;
+        border-color: #e6e6e6;
+        border-radius: 0;
+        -webkit-appearance: none;
+        font-size: 16px;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        background-image: url('assets/img/icon-chevron-down-dark.svg');
+        background-repeat: no-repeat;
+        background-position: 315px 50%;
+      }
+    }
+  }
+}
+
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  .post-type-archive-portfolio,
+  .tax-portfolio-category {
+
+  }
+
+}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .post-type-archive-portfolio,
+  .tax-portfolio-category {
+    .portfolio-categories {
+      text-align: left;
+      margin: 0 0 30px;
+    }
+  }
+
+}
+
+// Up to tablet
+@media (max-width: 767px) {
+
+  .post-type-archive-portfolio,
+  .tax-portfolio-category {
+    .page-title {
+      h1 {
+        margin: 0 0 30px;
+      }
+    }
+    .portfolio-categories {
+      text-align: left;
+      margin: 0 0 20px;
+      li {
+        margin: 0 5px 10px 0;
+        a {
+
+        }
+      }
+    }
+    .archive-description {
+      margin: 0 0 40px;
+    }
+  }
+
+}
+
+// Up to landscape phone
+@media (max-width: 480px) {
+
+  .post-type-archive-portfolio,
+  .tax-portfolio-category {
+    .page-title {
+      h1 {
+        margin: 0 0 15px;
+      }
+    }
+    .portfolio-categories {
+      text-align: left;
+      margin: 0 0 20px;
+      li {
+        margin: 0 5px 10px 0;
+        a {
+
+        }
+      }
+    }
+    .archive-description {
+      margin: 0 0 30px;
+    }
+  }
+
+}

@@ -1,0 +1,82 @@
+// pagination.scss
+// -----------------------------------------------------------------
+
+
+
+// Shame
+.pagination { 
+  padding: 0 0 30px !important; 
+  clear: both;  
+  margin: 0 0 15px 0;   
+}
+
+.page-template-page-portfolio-php .pagination { 
+  text-align: center; 
+  margin: 0;
+  padding: 20px 0 !important;
+}
+
+.page-template-page-portfolio-php .pagination .inside {   
+  display: inline-block;
+}
+
+.pagination span,
+.pagination a,
+.pagination-prev a,
+.pagination-next a,
+.older-comments,
+.newer-comments {
+  display: block;
+  float: left;
+  width: auto;
+  height: 24px;
+  line-height: 24px;
+  margin: 0 5px 0 0;
+  padding: 0 8px; 
+  text-align: center;
+  text-decoration: none;
+}
+
+.pagination-prev a:hover,
+.pagination-next a:hover,
+.wp-pagenavi a:hover,
+.wp-pagenavi .current {
+    
+}
+
+.pagination-prev a,
+.pagination-next a {
+  float: none;
+  margin: 0px;
+}
+
+.pagination-prev,
+.pagination-next {
+  float: left;
+  width: auto;
+  margin: 0px;
+}
+
+.pagination-prev {
+  float: right;
+}
+
+
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {}
+
+// Up to tablet
+@media (max-width: 767px) {}
+
+// Up to landscape phone
+@media (max-width: 480px) {}

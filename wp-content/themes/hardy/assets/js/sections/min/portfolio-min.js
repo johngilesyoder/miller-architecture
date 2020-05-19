@@ -1,0 +1,1 @@
+!function(c,o,t){c((function(){"use strict";Modernizr.objectfit||c(".project-block").each((function(){var o=c(this),t=o.find("img").prop("src");t&&o.css("backgroundImage","url("+t+")").addClass("compat-object-fit")})),c(document).ready((function(){c("#category").on("change",(function(){window.location.href=this.value}))}))}))}(jQuery,this);

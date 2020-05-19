@@ -1,0 +1,50 @@
+// wysiwyg-grid.scss
+// -----------------------------------------------------------------
+
+.one_half {
+  width:48%;
+}
+.one_third {
+  width:31%;
+}
+.two_third {
+  width:65.33%;
+}
+.one_half,
+.one_third,
+.two_third {
+  position:relative;
+  margin-right:3%;
+  float:left;
+}
+.last {
+  margin-right:0 !important;
+  clear:right;
+}
+.clearboth {
+  clear:both;
+  display:block;
+  font-size:0;
+  height:0;
+  line-height:0;
+  width:100%;
+}
+
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {}
+
+// Up to tablet
+@media (max-width: 767px) {}
+
+// Up to landscape phone
+@media (max-width: 480px) {}

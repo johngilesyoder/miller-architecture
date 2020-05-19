@@ -1,0 +1,63 @@
+// contact.scss
+// -----------------------------------------------------------------
+
+.page-contact {
+  .careers-link {
+
+  }
+  h4 {
+    font-weight: 500;
+    font-family: $font-family-sans-serif;
+    margin: 0 0 30px;
+  }
+  .gform_wrapper {
+    margin-top: 0;
+    font-size: .9em;
+    font-family: $font-family-sans-serif;
+    .gform_heading {
+      display: none;
+    }
+    .gform_button {
+      @extend .btn;
+      @extend .btn-primary;
+      font-size: 16px;
+      font-weight: 700;
+    }
+    label.gfield_label {
+      font-weight: 500;
+    }
+    .field_sublabel_below .ginput_complex.ginput_container label {
+      font-size: 12px;
+      font-weight: 500;
+    }
+  }
+}
+
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {}
+
+// Up to tablet
+@media (max-width: 767px) {
+
+  .page-contact {
+    .careers-link {
+      border-bottom: 1px solid #e6e6e6;
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+    }
+  }
+
+}
+
+// Up to landscape phone
+@media (max-width: 480px) {}
