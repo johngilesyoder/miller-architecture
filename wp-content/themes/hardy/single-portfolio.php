@@ -44,7 +44,7 @@
 			</div>
 
 			<div class="row">
-				<div class="col-md-8 col-md-push-4">
+				<div class="col-lg-8 order-lg-2">
 					<!-- PROJECT DETAILS -->
 					<section class="project-details">
 						<div class="row">
@@ -98,7 +98,7 @@
 					</section>
 				</div>
 				<!-- PROJECT CONTENT -->
-				<div class="col-md-4 col-md-pull-8">
+				<div class="col-lg-4 order-lg-1">
 			    <div <?php post_class('clearfix project-summary'); ?>>
 						<?php the_content(); ?>
 						<div class="project-actions">
