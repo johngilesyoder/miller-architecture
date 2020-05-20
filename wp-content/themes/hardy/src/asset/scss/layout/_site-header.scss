@@ -18,6 +18,11 @@
     text-decoration: none;
   }
   .dropdown-menu {
+    .dropdown-item {
+      letter-spacing: 0 !important;
+      text-transform: none !important;
+      font-size: 18px !important;
+    }
     @include desktop-lg {
       box-shadow: 0 2px 24px rgba(0,0,0,.2);
       background: #fff;
