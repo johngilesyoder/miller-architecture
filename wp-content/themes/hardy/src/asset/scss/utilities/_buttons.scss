@@ -18,7 +18,7 @@
   font-weight: 700;
   &:before {
     content: '';
-    background: url('assets/img/icon-arrow-r-white.svg');
+    background: url('../../../dist/asset/img/icon-arrow-r-white.svg');
     width: 9px;
     height: 9px;
     display: inline-block;
@@ -30,7 +30,7 @@
     color: $link-color;
     text-decoration: none;
     &:before {
-      background: url('assets/img/icon-arrow-r-blue.svg');
+      background: url('../../../dist/asset/img/icon-arrow-r-blue.svg');
       background-size: cover;
     }
   }
@@ -38,11 +38,11 @@
     color: $link-color;
     border-color: $link-color;
     &:before {
-      background: url('assets/img/icon-arrow-r-blue.svg');
+      background: url('../../../dist/asset/img/icon-arrow-r-blue.svg');
     }
     &:hover {
       &:before {
-        background: url('assets/img/icon-arrow-r-white.svg');
+        background: url('../../../dist/asset/img/icon-arrow-r-white.svg');
       }
     }
   }

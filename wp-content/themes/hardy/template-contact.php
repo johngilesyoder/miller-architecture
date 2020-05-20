@@ -22,7 +22,7 @@
 						<h2 class="page-statement"><?php echo($custom_header); ?></h2>
 					<?php endif; ?>
 
-					<img class="feature-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/contact-feature.jpg" alt="contact_1" />
+					<img class="feature-img" src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/contact-feature.jpg" alt="contact_1" />
 
 		      <div class="row">
 		        <div class="col-sm-4">
