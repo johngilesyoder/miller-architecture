@@ -128,7 +128,7 @@
 				<div class="project-blocks">
 					<!-- Loop through projects -->
 					<?php
-						$args = array( 'post_type' => 'project', 'posts_per_page' => 3, 'tag' => 'featured' );
+						$args = array( 'post_type' => 'portfolio', 'posts_per_page' => 3, 'tag' => 'featured' );
 						$loop = new WP_Query( $args );
 						while ( $loop->have_posts() ) : $loop->the_post();
 					?>
