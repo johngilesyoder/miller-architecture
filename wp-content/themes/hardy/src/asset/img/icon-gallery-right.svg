@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="58px" height="60px" viewBox="0 0 58 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Project" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Project-(Desktop)" transform="translate(-1382.000000, -504.000000)" fill="#FFFFFF">
+            <g id="CAROUSEL" transform="translate(0.000000, 236.000000)">
+                <g id="CAROUSEL-NAV" transform="translate(720.000000, 298.000000) scale(-1, 1) translate(-720.000000, -298.000000) translate(0.000000, 268.000000)">
+                    <g id="Group-5">
+                        <path d="M0,0 L58,0 L58,60 L0,60 L0,0 Z M18.5370194,28.3577231 C17.8209935,29.0732194 17.8209935,30.2235212 18.5370194,30.8998267 L34.5448575,46.9081945 C35.3392649,47.7026018 36.6097871,47.7026018 37.4041945,46.9081945 C38.1986018,46.1137871 38.1986018,44.8432649 37.4041945,44.0488575 L24.2572821,30.8977083 C23.5412562,30.1822121 23.5412562,29.0319102 24.2572821,28.3556047 L37.4041945,15.2081627 C38.1986018,14.4137553 38.1986018,13.1437627 37.4041945,12.3493554 C36.6097871,11.554948 35.3392649,11.554948 34.5448575,12.3493554 L18.5370194,28.3577231 Z" id="Combined-Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

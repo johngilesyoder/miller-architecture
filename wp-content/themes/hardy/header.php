@@ -10,6 +10,7 @@
     <!-- =================================== -->
     <link href="<?php echo get_template_directory_uri(); ?>/assets/icon/favicon.png" rel="shortcut icon">
     <link href="<?php echo get_template_directory_uri(); ?>/assets/icon/touch.png" rel="apple-touch-icon-precomposed">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- Meta -->
     <!-- =================================== -->
@@ -78,25 +79,21 @@
 
 		<!-- Navbar -->
 		<!-- =================================== -->
-		<nav class="site-header navbar navbar-default">
-		  <div class="container-fluid">
-		    <div class="navbar-header">
-		      <!-- Mobile menu toggle -->
-		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
-		        <span class="sr-only">Toggle navigation</span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		      </button>
-		      <!-- Site logo -->
-		      <a class="navbar-brand" href="/">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/site-logo.svg" alt="Miller Roodell Architects">
-		        <!-- Miller <br>Architects<span>, Ltd</span> -->
-		      </a>
-		    </div>
-		    <!-- Collect the nav links for toggling -->
-		    <div class="collapse navbar-collapse" id="navbar-collapse">
-		      <?php primary_nav(); ?>
-		    </div>
-		  </div>
-		</nav>
+
+
+
+    <nav class="site-header navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+          <img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/site-logo.svg" alt="Miller Roodell Architects">
+          <!-- Miller <br>Architects<span>, Ltd</span> -->
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <?php primary_nav(); ?>
+        </div>
+      </div>
+    </nav>

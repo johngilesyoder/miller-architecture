@@ -1,0 +1,334 @@
+// home.scss
+// -----------------------------------------------------------------
+
+.home {
+  .site-header {
+    border: 0;
+    margin: 0;
+  }
+  // .gallery {
+  //   height: auto;
+  //   .gallery-item {
+  //     height: auto;
+  //     width: 100%;
+  //   }
+  // }
+
+  .gallery {
+    margin: 0 0 50px;
+    height: 600px;
+    -webkit-transition: opacity .5s .5s;
+    transition: opacity .5s .5s;
+    opacity: 0;
+    &.flickity-loaded {
+      opacity: 1;
+    }
+    img {
+      margin: 0 4px;
+      height: 600px;
+      width: auto;
+      opacity: .25;
+      transition: opacity 150ms;
+      &.is-selected {
+        opacity: 1;
+      }
+    }
+    .flickity-prev-next-button {
+      width: 60px;
+      height: 60px;
+      border-radius: 0;
+    }
+    .flickity-prev-next-button:hover {
+
+    }
+    /* arrow color */
+    .flickity-prev-next-button .arrow {
+      fill: rgba(0,0,0,.5);
+    }
+    .flickity-prev-next-button.no-svg {
+      color: white;
+    }
+    /* position outside */
+    .flickity-prev-next-button.previous {
+      left: -0px;
+    }
+    .flickity-prev-next-button.next {
+      right: -0px;
+    }
+  }
+
+
+  .home-message {
+    margin: 0 auto 60px;
+    text-align: center;
+    h2 {
+      font-size: 30px;
+      font-family: $font-family-serif;
+      line-height: 1.45em;
+      margin: 0 0 30px;
+      text-align: center;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.5em;
+    }
+  }
+
+  .home-secondary-blocks {
+    display: flex;
+    .block {
+      text-align: center;
+      width: 50%;
+      padding: 30px;
+      position: relative;
+      color: #fff;
+      text-decoration: none;
+      background-size: cover;
+      background-position: 50% 50%;
+      .gradient-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        transition: 150ms background-image;
+        @include gradient-y(rgba(0,0,0,.3), rgba(0,0,0,.55), 50%, 100%);
+        opacity: .2;
+        transition: opacity 150ms;
+      }
+      .block-wrapper {
+        position: relative;
+        z-index: 10;
+      }
+      p {
+        font-size: 24px;
+        font-style: italic;
+        margin: 0;
+      }
+      &:hover {
+        .gradient-bg {
+          opacity: 1;
+        }
+      }
+      &:first-child {
+        margin-right: 15px;
+        .gradient-bg {
+          opacity: .7;
+        }
+        &:hover {
+          .gradient-bg {
+            opacity: 1;
+          }
+        }
+      }
+      &:last-child {
+        margin-left: 15px;
+      }
+    }
+    .block-video {
+      background-image: url('../../../dist/asset/img/video-thumb.png');
+      .btn-play {
+        display: block;
+        height: 80px;
+        padding-top: 15px;
+        opacity: .8;
+        margin: 50px 0;
+        text-align: center;
+        i {
+          display: inline-block;
+          background-image: url('../../../dist/asset/img/icon-play.svg');
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: 50% 50%;
+          height: 50px;
+          width: 50px;
+          z-index: 3;
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .block-ml {
+      background-image: url('../../../dist/asset/img/ml-block-bg.jpg');
+      background-position: 50% 80%;
+      .gradient-bg {
+        @include gradient-y(rgba(0,0,0,.5), rgba(0,0,0,.85), 0%, 100%);
+        opacity: .6;
+      }
+      .ml-logo {
+        height: 80px;
+        margin: 50px 0;
+      }
+    }
+  }
+  .modal-backdrop.in {
+    filter: alpha(opacity=7);
+    opacity: 0.9;
+  }
+
+  .modal-content {
+      background: none;
+      border: 0;
+      -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;
+      -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
+  }
+
+  .modal-body {
+      padding: 0 25px 25px 25px;
+  }
+
+  .modal-header {
+      padding: 25px 25px 15px 25px;
+      text-align: right;
+  }
+
+  .modal-header, .modal-footer {
+      border: 0;
+  }
+
+  .modal-header .close {
+      float: none;
+      margin: 0;
+      font-size: 36px;
+      color: #fff;
+      font-weight: 300;
+      text-shadow: none;
+      opacity: 1;
+  }
+}
+
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  .home {
+    .video-callout {
+      .video-summary {
+        padding: 20px 0;
+      }
+    }
+  }
+
+}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .home {
+    .gallery {
+      margin: 0 -15px 50px;
+      height: 500px;
+      img {
+        height: 500px;
+      }
+    }
+    .home-secondary-blocks {
+      .block {
+        &:first-child {
+          margin-right: 7.5px;
+        }
+        &:last-child {
+          margin-left: 7.5px;
+        }
+        p {
+          font-size: 21px;
+          br {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+// Up to tablet
+@media (max-width: 767px) {
+
+  .home {
+    .gallery {
+      margin: 0 -15px 30px;
+      height: 400px;
+      img {
+        height: 400px;
+      }
+    }
+    .home-message {
+      margin: 0 0 30px;
+      h2 {
+        margin: 0 0 15px;
+      }
+    }
+    .home-secondary-blocks {
+      flex-flow: row wrap;
+      .block {
+        width: 100%;
+        p {
+          font-size: 21px;
+        }
+        &:first-child {
+          margin: 0 0 30px;
+        }
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+
+  }
+
+}
+
+// Up to landscape phone
+@media (max-width: 480px) {
+
+  .home {
+    .home-message {
+      h2 {
+        font-size: 24px;
+      }
+    }
+    main {
+      border-bottom: 1px solid #e6e6e6;
+      padding-bottom: 30px;
+      margin-bottom: 15px;
+    }
+    .home-secondary-blocks {
+      flex-flow: row wrap;
+      .block {
+        padding: 15px;
+        p {
+          font-size: 18px;
+          line-height: 1.25em;
+          br {
+            display: none;
+          }
+        }
+      }
+      .block-video {
+        .btn-play {
+          margin: 30px 0;
+        }
+      }
+      .block-ml {
+        .ml-logo {
+          height: 50px;
+          margin: 30px 0;
+        }
+      }
+    }
+
+  }
+
+}
+
+// Up to landscape phone
+@media (max-width: 400px) {}

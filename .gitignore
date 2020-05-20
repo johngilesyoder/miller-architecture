@@ -108,3 +108,5 @@ wp-content/mysql.sql
 *.asf
 *.wmv
 *.avi
+
+wp-content/themes/hardy/node_modules

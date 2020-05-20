@@ -1,0 +1,68 @@
+// mixins.scss
+// -----------------------------------------------------------------
+
+// Media queries
+// --------------------------------------------------
+
+@mixin tiny {
+  @media (max-width: 320px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin tablet-lg {
+  @media (min-width: 768px) and (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 992px) and (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin desktop-lg {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+
+// Card
+@mixin card {
+  box-shadow: 0 40px 60px -30px rgba(0,0,0,.4);
+  background: #fff;
+  padding: 30px;
+  @include mobile {
+    padding: 15px;
+  }
+}
+
+
+// Old
+.vertical-center {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.vertical-center-parent {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}

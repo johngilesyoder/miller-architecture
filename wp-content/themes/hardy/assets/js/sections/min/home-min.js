@@ -1,1 +1,0 @@
-!function($,i,o){$(function(){"use strict";$("#modal-video").on("hidden.bs.modal",function(i){$("#modal-video iframe").attr("src",$("#modal-video iframe").attr("src"))})})}(jQuery,this);
