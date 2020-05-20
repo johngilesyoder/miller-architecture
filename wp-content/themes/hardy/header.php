@@ -8,8 +8,8 @@
 
     <!-- Styles -->
     <!-- =================================== -->
-    <link href="<?php echo get_template_directory_uri(); ?>/assets/icon/favicon.png" rel="shortcut icon">
-    <link href="<?php echo get_template_directory_uri(); ?>/assets/icon/touch.png" rel="apple-touch-icon-precomposed">
+    <link href="<?php echo get_template_directory_uri(); ?>/dist/asset/icon/favicon.png" rel="shortcut icon">
+    <link href="<?php echo get_template_directory_uri(); ?>/dist/asset/icon/touch.png" rel="apple-touch-icon-precomposed">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- Meta -->
