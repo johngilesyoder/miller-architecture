@@ -1,6 +1,25 @@
 // buttons.scss
 // -----------------------------------------------------------------
 
+.btn-normal {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 1px solid #555;
+  padding: 10px 30px;
+  font-family: $font-family-sans-serif;
+  text-decoration: none;
+  font-weight: 400;
+  transition: all 125ms;
+  display: inline-block;
+  text-align: center;
+  &:hover {
+    color: #fff;
+    background: #111;
+    text-decoration: none;
+  }
+}
+
 .btn-strip {
   padding: 0;
   border: 0;

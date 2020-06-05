@@ -4,15 +4,10 @@
 		<div class="row">
 			<div class="col-lg-8 order-lg-2">
 				<div class="row">
-					<div class="col-lg-8">
+					<div class="col-lg-12">
 						<p class="footer-callout">
 							We would love to talk about your project’s potential; contact us at 406.551.6950 or <a href="mailto:info@miller-roodell.com">info@miller-roodell.com</a>.
 						</p>
-					</div>
-					<div class="col-lg-4 ml-badge">
-						<a href="http://www.mountainliving.com/People/The-ML-List-Top-Architects-Designers-2019/" target="_blank">
-							<img alt="Mountain Living's 2019 Top Mountain Architects &amp; Designers" src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/badge-ml.png?v=2019" />
-						</a>
 					</div>
 				</div>
 			</div>

@@ -1,0 +1,242 @@
+// community.scss
+// -----------------------------------------------------------------
+
+.page-community {
+  .page-masthead {
+    background-position: 100% 50%;
+    background-size: cover;
+    position: relative;
+    .page-title {
+      position: relative;
+      z-index: 10;
+    }
+    &:after {
+      content: '';
+      @include gradient-y(rgba(0,0,0,.2), rgba(0,0,0,.7), 0%, 100%);
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+  .community-intro {
+    margin: 0 0 80px;
+    @include tablet {
+      margin: 0 0 40px;
+    }
+    @include mobile {
+      margin: 0 0 30px;
+    }
+    h2 {
+      font-size: 42px;
+      margin: 0 0 30px;
+      font-weight: 400;
+      @include tablet {
+        font-size: 36px;
+      }
+      @include mobile {
+        font-size: 30px;
+        margin: 0 0 15px;
+      }
+    }
+    .community-intro-img {
+      width: 100%;
+      object-position: center;
+      object-fit: cover;
+      @include tablet-lg {
+        height: 400px;
+        margin-top: 30px;
+      }
+      @include tablet {
+        height: 250px;
+        margin-top: 30px;
+      }
+    }
+  }
+  .community-projects {
+    margin: 0 0 120px;
+    @include tablet {
+      margin: 0 0 40px;
+    }
+    @include mobile {
+      margin: 0 0 30px;
+    }
+    h3 {
+      font-family: $font-family-sans-serif;
+      font-size: 18px;
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin: 0 0 30px;
+      @include mobile {
+        margin: 0 0 15px;
+      }
+    }
+    .community-project {
+      background: #fafafa;
+      display: flex;
+      flex-flow: row wrap;
+      margin: 0 0 30px;
+      .project-img {
+        width: 25%;
+        object-position: center;
+        object-fit: cover;
+        @include desktop {
+          width: 40%;
+        }
+        @include tablet-lg {
+          width: 40%;
+        }
+        @include tablet {
+          width: 100%;
+        }
+      }
+      .project-details {
+        width: 75%;
+        padding: 30px;
+        @include desktop {
+          width: 60%;
+        }
+        @include tablet-lg {
+          width: 60%;
+        }
+        @include tablet {
+          width: 100%;
+        }
+        @include mobile {
+          padding: 15px;
+        }
+        h4 {
+          font-family: $font-family-sans-serif;
+          font-size: 24px;
+          font-weight: 300;
+          text-transform: uppercase;
+          letter-spacing: 3.5px;
+          margin: 0 0 30px;
+          @include tablet {
+            font-size: 21px;
+            letter-spacing: 2.5px;
+          }
+          @include mobile {
+            margin: 0 0 15px;
+          }
+        }
+        .btn-normal {
+          @include mobile {
+            width: 100%;
+          }
+        }
+        .details-build {
+          margin: 0 0 30px;
+          @include mobile {
+            margin: 0 0 15px;
+          }
+          .detail-title {
+            font-family: $font-family-sans-serif;
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 1px;
+            margin-right: 10px;
+          }
+          ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            line-height: 1.6em;
+            li {
+              a {
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .charitable-orgs {
+    margin: 0 0 120px;
+    @include tablet {
+      margin: 0 0 40px;
+    }
+    @include mobile {
+      margin: 0 0 30px;
+    }
+    .section-header {
+      text-align: center;
+      margin: 0 0 60px;
+      @include tablet {
+        margin: 0 0 40px;
+      }
+      @include mobile {
+        margin: 0 0 30px;
+      }
+      h3 {
+        font-size: 42px;
+        margin: 0 0 30px;
+        font-weight: 400;
+        @include tablet {
+          font-size: 36px;
+        }
+        @include mobile {
+          font-size: 30px;
+          margin: 0 0 15px;
+        }
+      }
+    }
+    .the-orgs {
+      display: flex;
+      flex-flow: row wrap;
+      .organization {
+        width: 50%;
+        text-align: center;
+        padding: 30px 5%;
+        @include tablet {
+          width: 100%;
+          padding: 0 30px;
+          margin: 0 0 30px;
+          border-bottom: 1px solid $border-color;
+          padding-bottom: 40px;
+        }
+        @include mobile {
+          padding: 0 15px 40px;
+        }
+        &:first-child {
+          border-right: 1px solid $border-color;
+          @include tablet {
+            border-right: 0;
+            margin: 0 0 40px;
+          }
+          @include mobile {
+            margin: 0 0 30px;
+            padding-bottom: 30px;
+          }
+        }
+        .organization-logo {
+          width: 280px;
+          margin: 0 0 60px;
+          @include tablet {
+            width: 200px;
+            margin: 0 0 40px;
+          }
+        }
+        h4 {
+          font-family: $font-family-sans-serif;
+          font-size: 24px;
+          font-weight: 300;
+          text-transform: uppercase;
+          letter-spacing: 3.5px;
+          margin: 0 0 30px;
+          @include tablet {
+            font-size: 18px;
+            margin: 0 0 15px;
+          }
+        }
+        .btn-normal {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.page-masthead {
+  background: $body-color;
+  color: #fff;
+  padding: 275px 0 30px;
+  margin: 0 0 80px;
+  @include tablet {
+    margin: 0 0 40px;
+  }
+  @include mobile {
+    margin: 0 0 30px;
+  }
+  .page-title {
+    color: #fff;
+    margin: 0;
+    h1,h2 {
+      color: #fff;
+    }
+    .page-summary {
+      font-size: 24px;
+      margin: 0;
+      letter-spacing: 0;
+      @include tablet {
+        font-size: 18px;
+      }
+    }
+  }
+}

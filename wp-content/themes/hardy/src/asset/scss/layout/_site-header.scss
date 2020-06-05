@@ -4,6 +4,7 @@
 .site-header {
   border-bottom: 1px solid #f2f2f2;
   margin-bottom: 50px;
+  z-index: 100;
   .container-fluid {
     @include tablet {
       padding-left: 15px;
@@ -97,6 +98,50 @@
   .navbar-toggle {
     .icon-bar {
       width: 27px;
+    }
+  }
+}
+
+.site-header.inverse {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  border: 0;
+  background: rgba(0,0,0,.85);
+  .navbar-brand {
+    color: #fff;
+    img {
+      height: 32px;
+    }
+  }
+  .navbar-collapse {
+    .navbar-nav {
+      & > li {
+        a {
+          color: #fff;
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  .dropdown-menu {
+    .dropdown-item span {
+      color: #333;
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+  .navbar-toggler {
+    color: rgba(255,255,255,0.5);
+    border-color: rgba(255,255,255, 0.1);
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255,255,255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
     }
   }
 }
