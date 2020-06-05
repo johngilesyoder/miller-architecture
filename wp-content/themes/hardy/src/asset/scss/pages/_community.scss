@@ -235,6 +235,9 @@
         }
         .btn-normal {
           margin-top: 30px;
+          @include mobile {
+            width: 100%;
+          }
         }
       }
     }
