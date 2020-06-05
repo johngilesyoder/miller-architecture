@@ -4,7 +4,7 @@ $custom_header = get_field( "page_custom_header" );
 ?>
 
 	<!-- post thumbnail -->
-	<section class="page-masthead" style="background-image:url('<?php echo get_template_directory_uri(); ?>/dist/asset/img/soccer.gif');">
+	<section class="page-masthead" style="background-image:url('<?php echo get_template_directory_uri(); ?>/dist/asset/img/Soccer.gif');">
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
