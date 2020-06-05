@@ -79,7 +79,7 @@
 
 		<!-- Navbar -->
 		<!-- =================================== -->
-    <nav class="site-header navbar navbar-expand-lg navbar-light <?php if (is_front_page() || is_page_template( 'template-community.php' )) : ?>inverse<?php endif;?>">
+    <nav class="site-header navbar navbar-expand-lg navbar-light <?php if (is_page_template( 'template-community.php' )) : ?>inverse<?php endif;?>">
       <div class="container-fluid">
         <a class="navbar-brand" href="/">
         <?php if (is_front_page() || is_page_template( 'template-community.php' )) : ?>
