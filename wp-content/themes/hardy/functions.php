@@ -98,12 +98,12 @@ function miller_conditional_scripts() {
 
   // IF is not Homepage or Community or Project
   if (!is_singular('portfolio') && !is_page_template('template-community.php') && !is_front_page()) {
-    
-    wp_register_script('init-slick', get_template_directory_uri() . '/dist/asset/js/init-slick.js', array('jquery'), null, true);
-    wp_enqueue_script('init-slick'); // Enqueue it!
 
     wp_register_script('slick', get_template_directory_uri() . '/src/asset/js/lib/slick.min.js', array('jquery'), '1.8.1');
     wp_enqueue_script('slick'); // Enqueue it!
+
+    wp_register_script('init-slick', get_template_directory_uri() . '/dist/asset/js/init-slick.js', array('jquery'), null, true);
+    wp_enqueue_script('init-slick'); // Enqueue it!
     
   }
   

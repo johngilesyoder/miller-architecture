@@ -50,6 +50,20 @@
 
 <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
 <?php if ( !is_singular('portfolio') && !is_page_template('template-community.php') && !is_front_page() ) : ?>
+  <script type="text/javascript">
+    jQuery('.gallery').slick({
+      autoplay: true,
+      autoPlaySpeed: 4000,
+      arrows: false,
+      dots: true,
+      infinite: true,
+      pauseOnFocus: false,
+      pauseOnHover: false,
+      speed: 3000,
+      fade: true,
+      cssEase: 'linear'
+    });
+  </script>
 <?php endif; ?>
 
 <?php wp_footer(); ?>
