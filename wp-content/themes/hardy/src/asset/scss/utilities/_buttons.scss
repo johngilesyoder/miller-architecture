@@ -1,11 +1,27 @@
 // buttons.scss
 // -----------------------------------------------------------------
 
+.btn-solid {
+  @include button-variant(#000, #000, #222, #fff);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+  border-color: transparent;
+  font-family: $font-family-sans-serif;
+  text-decoration: none;
+  font-size: 13px;
+  padding: 10px 15px;
+  border-radius: 0;
+  &:hover {
+    border-color: transparent;
+  }
+}
+
 .btn-normal {
-  font-size: 14px;
+  @include button-outline-variant(#000, #fff);
+  font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  border: 1px solid #555;
   padding: 10px 30px;
   font-family: $font-family-sans-serif;
   text-decoration: none;
@@ -13,10 +29,7 @@
   transition: all 125ms;
   display: inline-block;
   text-align: center;
-  background: transparent;
   &:hover {
-    color: #fff;
-    background: #111;
     text-decoration: none;
   }
 }

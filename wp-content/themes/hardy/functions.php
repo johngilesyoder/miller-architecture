@@ -102,8 +102,25 @@ function miller_conditional_scripts() {
     wp_register_script('slick', get_template_directory_uri() . '/src/asset/js/lib/slick.min.js', array('jquery'), '1.8.1');
     wp_enqueue_script('slick'); // Enqueue it!
 
-    wp_register_script('init-slick', get_template_directory_uri() . '/dist/asset/js/init-slick.js', array('jquery'), null, true);
-    wp_enqueue_script('init-slick'); // Enqueue it!
+    function slick_init() {
+      echo '<script type="text/javascript">
+        jQuery(function($){
+          $(".gallery").slick({
+            autoplay: true,
+            autoPlaySpeed: 4000,
+            arrows: false,
+            dots: true,
+            infinite: true,
+            pauseOnFocus: false,
+            pauseOnHover: false,
+            speed: 3000,
+            fade: true,
+            cssEase: "linear"
+          });
+        });
+      </script>';
+    }
+    add_action('wp_footer', 'slick_init');
     
   }
   
