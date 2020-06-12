@@ -27,7 +27,7 @@ $custom_header = get_field( "page_custom_header" );
             <p>Ponec id elit non mi porta gravida at eget metus. Curabitur blandit tempus porttitor. Cras mattis consectetur purus sit amet fermentum. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
           </div>
           <div class="col-lg-4 offset-lg-1">
-            <img class="community-intro-img" src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/community-intro.jng" alt="Photo of Library project">
+            <img class="community-intro-img" src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/community-intro.jpg" alt="Photo of Library project">
           </div>
         </div>
       </div>
