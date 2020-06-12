@@ -1,0 +1,14 @@
+.modal {
+  .modal-header {
+    .modal-title {
+      font-family: $font-family-sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 18px;
+      font-weight: 300;
+      @include mobile {
+        font-size: 16px;
+      }
+    }
+  }
+}

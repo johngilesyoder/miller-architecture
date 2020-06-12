@@ -48,7 +48,7 @@ $custom_header = get_field( "page_custom_header" );
                 <li><span class="detail-title">Completion Date</span> <span class="detail-value">March 2019</span></li>
               </ul>
             </div>
-            <a href="#" class="btn-normal">View Gallery</a>
+            <button type="button" class="btn-normal" data-toggle="modal" data-target="#galleryModal-1">View Gallery</button>
           </div>
         </div>
         <!-- PROJECT -->
@@ -64,7 +64,7 @@ $custom_header = get_field( "page_custom_header" );
                 <li><span class="detail-title">Completion Date</span> <span class="detail-value">December 2017</span></li>
               </ul>
             </div>
-            <a href="#" class="btn-normal">View Gallery</a>
+            <button type="button" class="btn-normal" data-toggle="modal" data-target="#galleryModal-2">View Gallery</button>
           </div>
         </div>
       </div>
@@ -104,6 +104,66 @@ $custom_header = get_field( "page_custom_header" );
 				</div>
 			<?php endwhile; ?>
 		</div>
-	</main>
+  </main>
+
+  <div class="modal modal-gallery fade" id="galleryModal-1" tabindex="-1" role="dialog" aria-labelledby="galleryModal-1Label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="galleryModal-1Label">White Sulfur Springs Public Library</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- PROJECT GALLERY -->
+          <div class="project-carousel gallery">
+            <div>
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/wss-1.jpg" />
+            </div>
+            <div>
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/wss-2.jpg" />
+            </div>
+            <div>
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/wss-3.jpg" />
+            </div>
+            <div>
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/wss-4.jpg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal-gallery fade" id="galleryModal-2" tabindex="-1" role="dialog" aria-labelledby="galleryModal-2Label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="galleryModal-2Label">Livingston North Side Soccer Building</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- PROJECT GALLERY -->
+          <div class="project-carousel gallery">
+          <div>
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/lns-1.jpg" />
+            </div>
+            <div>
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/lns-2.jpg" />
+            </div>
+            <div>
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/lns-3.jpg" />
+            </div>
+            <div>
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/lns-4.jpg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 <?php get_footer(); ?>

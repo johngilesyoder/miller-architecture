@@ -22,7 +22,7 @@ const paths = {
     dest: 'dist/asset/css'
   },
   scripts: {
-    src: ['src/asset/js/bundle.js', 'src/asset/js/home.js', 'src/asset/js/portfolio.js', 'src/asset/js/project.js'],
+    src: ['src/asset/js/bundle.js', 'src/asset/js/home.js', 'src/asset/js/portfolio.js', 'src/asset/js/project.js', 'src/asset/js/community.js'],
     dest: 'dist/asset/js'
   },
   images: {
