@@ -50,7 +50,9 @@ $link-hover-decoration: underline !default;
 // $yiq-text-dark:               $gray-dark;
 
 // // Fonts
-$font-family-serif:           "garamond-premier-pro", Garamond, Georgia, "Times New Roman", Times, serif;
+$font-family-serif:           "garamond-premier-pro", Georgia, "Times New Roman", Times, serif;
+$font-family-display:         "garamond-premier-pro-display", Garamond, Georgia, "Times New Roman", Times, serif;
+$font-family-subhead:         "garamond-premier-pro-subhead", Garamond, Georgia, "Times New Roman", Times, serif;
 $font-family-sans-serif:      "Gill Sans", "Gill Sans MT", "prenton", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-family-base:            $font-family-serif;
 

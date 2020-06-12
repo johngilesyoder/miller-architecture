@@ -78,7 +78,7 @@ function miller_header_scripts() {
     wp_register_script('modernizr', get_template_directory_uri() . '/src/asset/js/lib/modernizr-3.5.js', array(), '3.5');
     wp_enqueue_script('modernizr'); // Enqueue it!
 
-    wp_register_script('miller-scripts', get_template_directory_uri() . '/dist/asset/js/bundle.js', array(), null, true);
+    wp_register_script('miller-scripts', get_template_directory_uri() . '/dist/asset/js/bundle.js', array('jquery'), null, true);
     wp_enqueue_script('miller-scripts'); // Enqueue it!
 
     wp_register_script('jquery-new', 'https://code.jquery.com/jquery-3.5.1.slim.min.js', array(), null, true);
@@ -87,7 +87,7 @@ function miller_header_scripts() {
     wp_register_script('bootstrap-popper', 'https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js', array(), null, true);
     wp_enqueue_script('bootstrap-popper'); // Enqueue it!
 
-    wp_register_script('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js', array(), null, true);
+    wp_register_script('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js', array('jquery'), null, true);
     wp_enqueue_script('bootstrap'); // Enqueue it!
 
   }
@@ -96,10 +96,21 @@ function miller_header_scripts() {
 // Load conditional scripts
 function miller_conditional_scripts() {
 
+  // IF is not Homepage or Community or Project
+  if (!is_singular('portfolio') && !is_page_template('template-community.php') && !is_front_page()) {
+    
+    wp_register_script('init-slick', get_template_directory_uri() . '/dist/asset/js/init-slick.js', array('jquery'), null, true);
+    wp_enqueue_script('init-slick'); // Enqueue it!
+
+    wp_register_script('slick', get_template_directory_uri() . '/src/asset/js/lib/slick.min.js', array('jquery'), '1.8.1');
+    wp_enqueue_script('slick'); // Enqueue it!
+    
+  }
+  
   // IF Home Page
   if (is_front_page()) {
 
-    wp_register_script('home', get_template_directory_uri() . '/dist/asset/js/home.js', array(), null, true);
+    wp_register_script('home', get_template_directory_uri() . '/dist/asset/js/home.js', array('jquery'), null, true);
     wp_enqueue_script('home'); // Enqueue it!
 
     wp_register_script('vimeo', 'https://player.vimeo.com/api/player.js', array('jquery'), '2.0.4'); // Video Player
@@ -109,29 +120,21 @@ function miller_conditional_scripts() {
 
   // IF Portfolio archive OR Portfolio taxonomy
   if ( is_post_type_archive( 'portfolio' ) || is_tax( 'portfolio-category' ) ) {
-    wp_register_script('portfolio', get_template_directory_uri() . '/dist/asset/js/portfolio.js', array(), null, true);
+    wp_register_script('portfolio', get_template_directory_uri() . '/dist/asset/js/portfolio.js', array('jquery'), null, true);
     wp_enqueue_script('portfolio'); // Enqueue it!
   }
 
   // IF Project page single
   if ( is_singular('portfolio') ) {
-    wp_register_script('project', get_template_directory_uri() . '/dist/asset/js/project.js', array(), null, true);
+    wp_register_script('project', get_template_directory_uri() . '/dist/asset/js/project.js', array('jquery'), null, true);
     wp_enqueue_script('project'); // Enqueue it!
   }
 
     // IF Project page single
     if ( is_page_template('template-community.php') ) {
-      wp_register_script('community', get_template_directory_uri() . '/dist/asset/js/community.js', array(), null, true);
+      wp_register_script('community', get_template_directory_uri() . '/dist/asset/js/community.js', array('jquery'), null, true);
       wp_enqueue_script('community'); // Enqueue it!
     }
-
-  // IF IS NOT Project page single OR Home Page
-  if (!is_singular('portfolio') && !is_front_page() ) {
-
-    wp_register_script('slick', get_template_directory_uri() . '/src/asset/js/lib/slick.min.js', array('jquery'), '1.8.1');
-  	wp_enqueue_script('slick'); // Enqueue it!
-
-  }
 
 }
 

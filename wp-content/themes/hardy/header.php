@@ -26,12 +26,6 @@
       }
     ?>
 
-
-    <!-- Typekit -->
-    <!-- =================================== -->
-		<script src="https://use.typekit.net/ndo5mwt.js"></script>
-	  <script>try{Typekit.load({ async: true });}catch(e){}</script>
-
     <!-- Wordpress Generated -->
     <!-- =================================== -->
     <?php wp_head(); ?>
@@ -79,10 +73,10 @@
 
 		<!-- Navbar -->
 		<!-- =================================== -->
-    <nav class="site-header navbar navbar-expand-lg navbar-light <?php if (is_page_template( 'template-community.php' )) : ?>inverse<?php endif;?>">
+    <nav class="site-header navbar navbar-expand-lg navbar-light <?php if (is_front_page() || is_page_template( 'template-community.php' )) : ?>inverse<?php endif;?>">
       <div class="container-fluid">
         <a class="navbar-brand" href="/">
-        <?php if (is_page_template( 'template-community.php' )) : ?>
+        <?php if (is_front_page() || is_page_template( 'template-community.php' )) : ?>
           <img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/site-logo-inverse.svg" alt="Miller Roodell Architects">
         <?php else : ?>
           <img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/site-logo.svg" alt="Miller Roodell Architects">

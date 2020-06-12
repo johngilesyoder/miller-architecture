@@ -1,0 +1,156 @@
+// Garamond Premier Pro
+// =====================================
+@font-face {
+  font-family: 'garamond-premier-pro-display';
+  src: 
+      url('../fonts/GaramondPremrPro-MedDisp.woff2') format('woff2'),
+      url('../fonts/GaramondPremrPro-MedDisp.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'garamond-premier-pro';
+  src: 
+      url('../fonts/GaramondPremrPro-Med.woff2') format('woff2'),
+      url('../fonts/GaramondPremrPro-Med.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'garamond-premier-pro';
+  src: 
+      url('../fonts/GaramondPremrPro-MedIt.woff2') format('woff2'),
+      url('../fonts/GaramondPremrPro-MedIt.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'garamond-premier-pro';
+  src: 
+      url('../fonts/GaramondPremrPro-Smbd.woff2') format('woff2'),
+      url('../fonts/GaramondPremrPro-Smbd.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'garamond-premier-pro-subhead';
+  src: 
+      url('../fonts/GaramondPremrPro-MedItSubh.woff2') format('woff2'),
+      url('../fonts/GaramondPremrPro-MedItSubh.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'garamond-premier-pro-subhead';
+  src: 
+      url('../fonts/GaramondPremrPro-MedSubh.woff2') format('woff2'),
+      url('../fonts/GaramondPremrPro-MedSubh.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'garamond-premier-pro-display';
+  src: 
+      url('../fonts/GaramondPremrPro-MedItDisp.woff2') format('woff2'),
+      url('../fonts/GaramondPremrPro-MedItDisp.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'garamond-premier-pro';
+  src: 
+      url('../fonts/GaramondPremrPro-SmbdIt.woff2') format('woff2'),
+      url('../fonts/GaramondPremrPro-SmbdIt.woff') format('woff');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'garamond-premier-pro';
+  src: 
+      url('../fonts/GaramondPremrPro.woff2') format('woff2'),
+      url('../fonts/GaramondPremrPro.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+// Gill Sans
+// =====================================
+@font-face {
+  font-family: 'gill-sans';
+  src: local('Gill Sans SemiBold'), local('GillSans-SemiBold'),
+      url('../fonts/GillSans-SemiBold.woff2') format('woff2'),
+      url('../fonts/GillSans-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'gill-sans';
+  src: local('Gill Sans SemiBold Italic'), local('GillSans-SemiBoldItalic'),
+      url('../fonts/GillSans-SemiBoldItalic.woff2') format('woff2'),
+      url('../fonts/GillSans-SemiBoldItalic.woff') format('woff');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'gill-sans';
+  src: local('Gill Sans Light Italic'), local('GillSans-LightItalic'),
+      url('../fonts/GillSans-LightItalic.woff2') format('woff2'),
+      url('../fonts/GillSans-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'gill-sans';
+  src: local('Gill Sans'), local('GillSans'),
+      url('../fonts/GillSans.woff2') format('woff2'),
+      url('../fonts/GillSans.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'gill-sans';
+  src: local('Gill Sans Italic'), local('GillSans-Italic'),
+      url('../fonts/GillSans-Italic.woff2') format('woff2'),
+      url('../fonts/GillSans-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'gill-sans';
+  src: local('Gill Sans Light'), local('GillSans-Light'),
+      url('../fonts/GillSans-Light.woff2') format('woff2'),
+      url('../fonts/GillSans-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+

@@ -23,6 +23,7 @@
 @import "vendor/flickity";
 
 // Utilities
+@import "utilities/fonts";
 @import "utilities/mixins";
 @import "utilities/buttons";
 @import "utilities/colors";
@@ -46,6 +47,9 @@
 @import "pages/404";
 @import "pages/contact";
 @import "pages/home";
+@import "pages/home/hero";
+@import "pages/home/intro";
+@import "pages/home/blocks";
 @import "pages/people";
 @import "pages/philosophy";
 @import "pages/portfolio";
