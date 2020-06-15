@@ -48,7 +48,7 @@ $custom_header = get_field( "page_custom_header" );
                 <li><span class="detail-title">Completion Date</span> <span class="detail-value">March 2019</span></li>
               </ul>
             </div>
-            <button type="button" class="btn-normal" data-toggle="modal" data-target="#galleryModal-1">View Gallery</button>
+            <button type="button" class="btn btn-normal" data-toggle="modal" data-target="#galleryModal-1">View Gallery</button>
           </div>
         </div>
         <!-- PROJECT -->
@@ -64,7 +64,7 @@ $custom_header = get_field( "page_custom_header" );
                 <li><span class="detail-title">Completion Date</span> <span class="detail-value">December 2017</span></li>
               </ul>
             </div>
-            <button type="button" class="btn-normal" data-toggle="modal" data-target="#galleryModal-2">View Gallery</button>
+            <button type="button" class="btn btn-normal" data-toggle="modal" data-target="#galleryModal-2">View Gallery</button>
           </div>
         </div>
       </div>
@@ -85,13 +85,13 @@ $custom_header = get_field( "page_custom_header" );
             <img class="organization-logo" src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/logo-reel-recovery.png">
             <h4>Reel Recovery</h4>
             <p>The mission of Reel Recovery is to help men in the cancer recovery process by introducing them to the healing powers of the sport of fly-fishing, while providing a safe, supportive environment to explore their personal experiences of cancer with others who share their stories.</p>
-            <a href="https://reelrecovery.org/" target="_blank" class="btn-normal">Learn More</a>
+            <a href="https://reelrecovery.org/" target="_blank" class="btn btn-normal">Learn More</a>
           </div>
           <div class="organization">
             <img class="organization-logo" src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/logo-windhorse.jpg">
             <h4>Reel Recovery</h4>
             <p>Windhorse Equine Learning helps Gallatin and Park County youth better manage the demands and challenges of their lives by encouraging the development of interpersonal and other life skills, including self-confidence, compassion, respect, and responsibility.</p>
-            <a href="https://windhorseequinelearning.org/" target="_blank" class="btn-normal">Learn More</a>
+            <a href="https://windhorseequinelearning.org/" target="_blank" class="btn btn-normal">Learn More</a>
           </div>
         </div>
       </div>

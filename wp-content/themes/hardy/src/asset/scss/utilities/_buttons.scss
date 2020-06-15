@@ -19,6 +19,7 @@
 
 .btn-normal {
   @include button-outline-variant(#000, #fff);
+  border-radius: 0;
   font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 2px;
