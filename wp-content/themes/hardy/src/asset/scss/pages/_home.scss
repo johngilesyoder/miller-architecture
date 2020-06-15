@@ -1,148 +1,29 @@
-// home.scss
-// -----------------------------------------------------------------
-
 .home {
-  .modal-backdrop.in {
-    filter: alpha(opacity=7);
-    opacity: 0.9;
-  }
-
-  .modal-content {
-      background: none;
-      border: 0;
-      -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;
-      -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
-  }
-
-  .modal-body {
-      padding: 0 25px 25px 25px;
-  }
-
-  .modal-header {
-      padding: 25px 25px 15px 25px;
-      text-align: right;
-  }
-
-  .modal-header, .modal-footer {
-      border: 0;
-  }
-
-  .modal-header .close {
-      float: none;
-      margin: 0;
-      font-size: 36px;
-      color: #fff;
-      font-weight: 300;
-      text-shadow: none;
-      opacity: 1;
-  }
-}
-
-
-// Media Queries
-// --------------------------------------------------
-
-// Large desktop and up
-@media (min-width: 1200px) {}
-
-// Desktop to large desktop
-@media (min-width: 992px) and (max-width: 1199px) {
-
-  .home {
-    .video-callout {
-      .video-summary {
-        padding: 20px 0;
-      }
-    }
-  }
-
-}
-
-// Tablet to desktop
-@media (min-width: 768px) and (max-width: 991px) {
-
-  .home {
-    .home-secondary-blocks {
-      .block {
-        &:first-child {
-          margin-right: 7.5px;
-        }
-        &:last-child {
-          margin-left: 7.5px;
-        }
-        p {
-          font-size: 21px;
-          br {
-            display: none;
-          }
-        }
-      }
-    }
-  }
-
-}
-
-// Up to tablet
-@media (max-width: 767px) {
-
-  .home {
-    .home-secondary-blocks {
-      flex-flow: row wrap;
-      .block {
-        width: 100%;
-        p {
-          font-size: 21px;
-        }
-        &:first-child {
-          margin: 0 0 30px;
-        }
-        &:last-child {
-          margin: 0;
-        }
-      }
-    }
-
-  }
-
-}
-
-// Up to landscape phone
-@media (max-width: 480px) {
-
-  .home {
-    main {
+  main {
+    @include mobile {
       border-bottom: 1px solid #e6e6e6;
       padding-bottom: 30px;
       margin-bottom: 15px;
     }
-    .home-secondary-blocks {
-      flex-flow: row wrap;
-      .block {
-        padding: 15px;
-        p {
-          font-size: 18px;
-          line-height: 1.25em;
-          br {
-            display: none;
-          }
-        }
-      }
-      .block-video {
-        .btn-play {
-          margin: 30px 0;
-        }
-      }
-      .block-ml {
-        .ml-logo {
-          height: 50px;
-          margin: 30px 0;
-        }
-      }
-    }
-
   }
-
+  #videoModal {
+    .modal-dialog {
+      max-width: 800px;
+      margin: 30px auto;
+    }
+    .modal-body {
+      position:relative;
+      padding:0px;
+    }
+    .close {
+      position:absolute;
+      right:-30px;
+      top:0;
+      z-index:999;
+      font-size:2rem;
+      font-weight: normal;
+      color:#fff;
+      opacity:1;
+    }
+  }
 }
-
-// Up to landscape phone
-@media (max-width: 400px) {}
