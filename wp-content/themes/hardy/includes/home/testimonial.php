@@ -1,7 +1,7 @@
 <section class="home-testimonial">
   <div class="container-fluid">
     <div class="row align-items-center">
-      <div class="col-md-6">
+      <div class="col-lg-6">
         <div class="video-preview">
 
           <video playsinline autoplay muted loop poster="<?php echo get_template_directory_uri(); ?>/dist/asset/img/video-poster.jpg" id="bgvid">
@@ -11,16 +11,16 @@
 
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-lg-6">
         <blockquote class="testimonial-quote">
           <p>&ldquo;They designed a house that accomplishes the near impossible, that actually enhances the spectacular beauty of our surroundings.&rdquo;</p>
         </blockquote>
         <div class="testimonial-thumbs">
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-sm-6">
               <img class="testimonial-thumb" src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/testimonial-1.jpg" />
             </div>
-            <div class="col-md-6">
+            <div class="col-sm-6">
               <img class="testimonial-thumb" src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/testimonial-2.jpg" />
             </div>
           </div>

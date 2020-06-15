@@ -3,7 +3,6 @@
     .block {
       background-color: #111;
       text-align: center;
-      width: 50%;
       padding: 30px 60px;
       position: relative;
       color: #fff;
@@ -13,42 +12,100 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      @include tablet-lg {
+        padding: 60px 30px;
+      }
+      @include tablet {
+        padding: 60px 30px;
+      }
       .block-title {
         color: #fff;
         text-shadow: 0 2px 16px rgba(0,0,0,1);
       }
       .block-btn {
         margin-top: 40px;
+        @include tablet {
+          margin-top: 30px;
+        }
       }
     }
     .block-lg {
       width: 100%;
       height: 85vh;
       margin: 0 0 30px;
+      @include tablet {
+        height: auto;
+        padding: 90px 30px;
+      }
+      @include mobile {
+        padding: 60px 30px;
+      }
+      br {
+        @include tablet-lg {
+          display: none;
+        }
+        @include tablet {
+          display: none;
+        }
+      }
       .block-title {
         font-family: $font-family-display;
         font-weight: 500;
         font-size: 60px;
+        @include tablet {
+          font-size: 42px;
+        }
+        @include mobile {
+          font-size: 36px;
+        }
       }
     }
     .blocks-wrapper {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-flow: row wrap;
       .block {
         width: calc(50% - 15px);
         height: 400px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        @include tablet {
+          width: 100%;
+          height: auto;
+          margin: 0 0 30px;
+        }
         .block-title {
           font-family: $font-family-sans-serif;
           font-size: 43px;
           font-weight: 400;
           text-transform: uppercase;
           letter-spacing: 4px;
+          @include tablet-lg {
+            font-size: 36px;
+          }
+          @include tablet {
+            font-size: 36px;
+          }
+          @include mobile {
+            font-size: 30px;
+          }
         }
         .block-subhead {
           font-size: 30px;
           font-weight: 400;
           text-shadow: 0 2px 16px rgba(0,0,0,1);
+          margin: 0;
+          @include tablet-lg {
+            font-size: 21px;
+          }
+          @include tablet {
+            font-size: 24px;
+          }
+          @include mobile {
+            font-size: 21px;
+          }
         }
       }
     }

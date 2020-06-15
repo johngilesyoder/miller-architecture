@@ -2,11 +2,22 @@
   .home-testimonial {
     margin: 0 0 80px;
     @include tablet {
+      margin: 0 0 40px;
+    }
+    @include mobile {
       margin: 0 0 30px;
     }
     .video-preview {
       height: 685px;
       background: $grey-bg;
+      @include tablet-lg {
+        height: 60vw;
+        margin: 0 0 30px;
+      }
+      @include tablet {
+        height: 80vw;
+        margin: 0 0 30px;
+      }
       video#bgvid { 
         object-fit: cover;
         height: 100%;
@@ -27,15 +38,33 @@
         font-style: italic;
         margin: 0;
         color: $black;
+        @include mobile {
+          font-size: 30px;
+        }
       }
     }
     .testimonial-thumbs {
       margin: 0 0 60px;
+      @include tablet-lg {
+        margin: 0 0 25px;
+      }
+      @include tablet {
+        margin: 0 0 25px;
+      }
+      @include mobile {
+        margin: 0 0 15px;
+      }
       .testimonial-thumb {
         height: 240px;
         width: 100%;
         object-fit: cover;
         object-position: 50%;
+        @include tablet-lg {
+          margin: 0 0 30px;
+        }
+        @include tablet {
+          margin: 0 0 15px;
+        }
       }
     }
     .testimonial-cta {
@@ -43,6 +72,9 @@
       align-items: center;
       justify-content: center;
       .btn {
+        @include mobile {
+          width: 100%;
+        }
         i {
           vertical-align: middle;
           line-height: 1;
