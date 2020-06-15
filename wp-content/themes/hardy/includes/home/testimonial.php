@@ -26,9 +26,10 @@
           </div>
         </div>
         <div class="testimonial-cta">
-          <button type="button" class="btn btn-solid video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/J7Hs0iwrQCo" data-target="#videoModal">
+          <a href="https://youtu.be/J7Hs0iwrQCo" target="_blank" class="btn btn-solid"><i class="material-icons">play_arrow</i> Watch Full Video</a>
+          <!-- <button type="button" class="btn btn-solid video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/J7Hs0iwrQCo" data-target="#videoModal">
             <i class="material-icons">play_arrow</i> Watch Full Video
-          </button>
+          </button> -->
         </div>
       </div>
     </div>
