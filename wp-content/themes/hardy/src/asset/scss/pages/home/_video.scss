@@ -1,6 +1,6 @@
 .home {
-  .home-testimonial {
-    margin: 0 0 80px;
+  .home-video {
+    margin: 0 0 50px;
     @include tablet {
       margin: 0 0 40px;
     }
@@ -8,8 +8,11 @@
       margin: 0 0 30px;
     }
     .video-preview {
-      height: 685px;
+      overflow: hidden;
+      height: 0;
+      padding-top: 56.25%;
       background: $grey-bg;
+      position: relative;
       @include tablet-lg {
         height: 60vw;
         margin: 0 0 30px;
@@ -18,7 +21,19 @@
         height: 80vw;
         margin: 0 0 30px;
       }
+      .btn-video {
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 100;
+      }
       video#bgvid { 
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
         object-fit: cover;
         height: 100%;
         width: 100%;

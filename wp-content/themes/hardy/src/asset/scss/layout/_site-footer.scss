@@ -5,16 +5,18 @@
   margin: 50px 0;
   address {
     line-height: 1.5;
-    font-size: 16px;
+    font-size: 14px;
     margin: 0 0 30px;
+    font-family: $font-family-sans-serif; 
     strong {
       display: block;
-      font-size: 16px;
+      font-size: 14px;
       color: #222;
       text-transform: uppercase;
       font-weight: 500;
       letter-spacing: 3.3px;
       margin: 0 0 5px;
+      font-family: $font-family-serif;
     }
   }
   .footer-company {
@@ -24,14 +26,18 @@
   .ml-badge {
     text-align: right;
     img {
-      max-width: 210px;
+      max-width: 150px;
     }
   }
   .footer-callout {
-    font-size: 24px;
+    margin-top: 28px;
+    font-size: 14px;
     line-height: 1.5;
+    text-align: center;
+    font-family: $font-family-sans-serif;
   }
   .footer-social {
+    text-align: center;
     a {
       display: inline-block;
       margin-right: 15px;

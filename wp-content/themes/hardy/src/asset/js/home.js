@@ -1,6 +1,7 @@
 var jQueryBridget = require('jquery-bridget');
 var Flickity = require('flickity');
 var asNavFor = require('flickity-as-nav-for');
+var bgLazyLoad = require('flickity-bg-lazyload');
 var fade = require('flickity-fade');
 
 // Use Flickity with jQuery via jQuery Bridget
@@ -13,14 +14,15 @@ $(document).ready(() => {
   var options = {
     initialIndex: 0,
     wrapAround: true,
-    imagesLoaded: true,
-    pageDots: false,
-    setGallerySize: false,
-    lazyLoad: 2,
+    // lazyLoad: 2,
     prevNextButtons: false,
     autoPlay: true,
     draggable: false,
-    pauseAutoPlayOnHover: false
+    pauseAutoPlayOnHover: false,
+    imagesLoaded: true, 
+    setGallerySize: false,
+    bgLazyLoad: true,
+    cellAlign: "left"
   };
 
   // enable prev/next buttons at 768px
@@ -29,7 +31,7 @@ $(document).ready(() => {
   }
 
   // show
-  var $carousel = $('.gallery').removeClass('is-hidden');
+  var $carousel = $('.carousel').removeClass('is-hidden');
   // trigger redraw for transition
   $carousel[0].offsetHeight;
   // init Flickity

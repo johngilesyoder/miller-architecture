@@ -26,32 +26,74 @@ main {
 
 // Page titles
 .page-title {
-  margin: 0 0 50px;
+  margin: 0 0 25px;
 }
 
 h1.page-title,
 h2.page-title,
 .page-title h1,
 .page-title h2 {
-  font-size: 48px;
+  font-size: 30px;
   letter-spacing: 5px;
   text-align: left;
   text-transform: uppercase;
   font-family: $font-family-sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   margin: 0;
 }
 
 h1.page-title,
 h2.page-title {
-  margin: 0 0 50px;
+  margin: 0 0 25px;
 }
 
-.page-statement {
-  margin: -25px 0 50px;
-  font-size: 24px;
-  line-height: 1.5;
-  font-weight: 400;
+.page-intro {
+  padding: 50px 0;
+  display: flex;
+  align-items: center;
+  @include tablet-lg {
+    padding: 50px 0;
+  }
+  @include tablet {
+    padding: 40px 0;
+  }
+  @include mobile {
+    padding: 30px 0;
+  }
+  h2 {
+    width: 33.3333%;
+    font-size: 24px;
+    font-family: $font-family-sans-serif;
+    line-height: 1.125em;
+    letter-spacing: 4px;
+    margin: 0;
+    padding: 10px 25px 10px 0;
+    text-align: right;
+    font-weight: 500;
+    border-right: 2px solid $black;
+    @include tablet {
+      margin: 0 0 15px;
+      font-size: 50px;
+    }
+    @include mobile {
+      font-size: 42px;
+    }
+  }
+  .page-summary {
+    width: 66.6666%;
+    font-family: $font-family-sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    margin: 0;
+    padding: 0 0 0 25px;
+    line-height: 1.25em;
+    @include tablet {
+      font-size: 21px;
+    }
+    @include mobile {
+      font-size: 18px;
+    }
+  }
 }
 
 // Page billboards

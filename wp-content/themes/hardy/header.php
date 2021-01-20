@@ -73,14 +73,10 @@
 
 		<!-- Navbar -->
 		<!-- =================================== -->
-    <nav class="site-header navbar navbar-expand-lg navbar-light <?php if (is_front_page() || is_page_template( 'template-community.php' )) : ?>inverse<?php endif;?>">
-      <div class="container-fluid">
+    <nav class="site-header navbar navbar-expand-lg navbar-light">
+      <div class="container">
         <a class="navbar-brand" href="/">
-        <?php if (is_front_page() || is_page_template( 'template-community.php' )) : ?>
-          <img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/site-logo-inverse.svg" alt="Miller Roodell Architects">
-        <?php else : ?>
-          <img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/site-logo.svg" alt="Miller Roodell Architects">
-        <?php endif; ?>
+        <img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/site-logo.svg" alt="Miller Roodell Architects">
           <!-- Miller <br>Architects<span>, Ltd</span> -->
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

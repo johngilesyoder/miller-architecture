@@ -37,6 +37,8 @@
 @import "components/video";
 @import "components/page-masthead";
 @import "components/modal";
+@import "components/hero";
+@import "components/content-block";
 
 // Layout
 @import "layout/page";
@@ -47,10 +49,9 @@
 @import "pages/404";
 @import "pages/contact";
 @import "pages/home";
-@import "pages/home/hero";
 @import "pages/home/intro";
-@import "pages/home/testimonial";
-@import "pages/home/blocks";
+@import "pages/home/video";
+// @import "pages/home/blocks";
 @import "pages/people";
 @import "pages/philosophy";
 @import "pages/portfolio";

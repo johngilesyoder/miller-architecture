@@ -2,7 +2,6 @@
 // -----------------------------------------------------------------
 
 .site-header {
-  border-bottom: 1px solid #f2f2f2;
   margin-bottom: 50px;
   z-index: 100;
   .container-fluid {
@@ -19,18 +18,19 @@
     text-decoration: none;
   }
   .dropdown-menu {
+    border-radius: 0;
+    box-shadow: none;
+    padding-top: 0;
+    margin-top: -3px;
     .dropdown-item {
-      letter-spacing: 0 !important;
-      text-transform: none !important;
-      font-size: 18px !important;
+      text-align: right;
+      padding-right: 15px !important;
     }
     @include desktop-lg {
-      box-shadow: 0 2px 24px rgba(0,0,0,.2);
       background: #fff;
       border: 0;
     }
     @include desktop {
-      box-shadow: 0 2px 24px rgba(0,0,0,.2);
       background: #fff;
       border: 0;
     }
@@ -60,7 +60,7 @@
     line-height: 1.2em;
     font-weight: 600;
     img {
-      height: 32px;
+      height: 40px;
     }
   }
   .navbar-collapse {
@@ -69,10 +69,12 @@
       font-weight: 500;
       letter-spacing: 1px;
       margin-left: 75px;
+      font-family: $font-family-sans-serif;
       & > li {
         a {
           padding-left: 10px;
           padding-right: 10px;
+          padding-top: 0;
           text-transform: uppercase;
           font-size: 14px;
           letter-spacing: 2px;
@@ -80,12 +82,15 @@
           &:hover {
             color: #000;
           }
-        }
-        &.current-menu-item {
-          a {
-            font-style: italic;
+          &:focus {
+            background: transparent;
           }
         }
+        // &.current-menu-item {
+        //   a {
+        //     font-style: italic;
+        //   }
+        // }
         &:last-child > a {
           padding-right: 0;
         }

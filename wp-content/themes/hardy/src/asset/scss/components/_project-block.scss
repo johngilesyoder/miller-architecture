@@ -1,13 +1,11 @@
 .project-blocks {
-  display: -webkit-flex;
   display: flex;
-  -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
 }
 .project-block {
   height: 300px;
-  width: 32.75%;
-  margin: 0 0.4% 10px;
+  flex-basis: calc(33.333333% - 7.5px);
+  margin: 0 10px 10px 0;
   background: #BEBEBE;
   position: relative;
   img {
@@ -25,9 +23,6 @@
   }
   &:nth-child(3n) {
     margin-right: 0;
-  }
-  &:nth-child(3n+1) {
-    margin-left: 0;
   }
   &:hover {
     figcaption {
@@ -57,6 +52,8 @@
       text-transform: uppercase;
       color: #fff;
       margin: 0;
+      font-family: $font-family-sans-serif;
+      font-weight: 400;
     }
   }
 }
@@ -81,19 +78,12 @@
 
   .project-block {
     height: 300px;
-    width: 49.5%;
-    margin: 0 0.5% 10px;
+    flex-basis: calc(50% - 5px);
     &:nth-child(3n) {
-      margin-right: 0.5%;
-    }
-    &:nth-child(3n+1) {
-      margin-left: 0.5%;
+      margin-right: 10px;
     }
     &:nth-child(even) {
       margin-right: 0;
-    }
-    &:nth-child(odd) {
-      margin-left: 0;
     }
   }
 
@@ -103,33 +93,17 @@
 @media (max-width: 767px) {
 
   .page-title {
-    h1 {
-      float: none;
-      margin: 0 0 30px;
-    }
-    .features-dropdown {
-      float: none;
-      margin: 0 0 20px;
-      select {
-        display: block;
-      }
-    }
+
   }
+
   .project-block {
     height: 250px;
-    width: 49.5%;
-    margin: 0 0.5% 10px;
+    flex-basis: calc(50% - 5px);
     &:nth-child(3n) {
-      margin-right: 0.5%;
-    }
-    &:nth-child(3n+1) {
-      margin-left: 0.5%;
+      margin-right: 10px;
     }
     &:nth-child(even) {
       margin-right: 0;
-    }
-    &:nth-child(odd) {
-      margin-left: 0;
     }
     figcaption {
       padding: 60px 15px 15px;

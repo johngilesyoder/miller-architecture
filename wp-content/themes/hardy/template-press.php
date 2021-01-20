@@ -9,13 +9,13 @@
 		</div>
 	</div>
 <?php else : ?>
-	<div class="container-fluid">
+	<div class="container">
 		<h1 class="page-title"><?php the_title(); ?></h1>
 	</div>
 <?php endif; ?>
 
 	<main role="main">
-		<div class="container-fluid">
+		<div class="container">
 			<?php if ( $custom_header ) : ?>
 				<h2 class="page-statement"><?php echo($custom_header); ?></h2>
 			<?php endif; ?>

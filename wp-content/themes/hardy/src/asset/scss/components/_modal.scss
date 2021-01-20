@@ -12,3 +12,34 @@
     }
   }
 }
+
+#modal-video {
+  .modal-content {
+    background: none;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .modal-header,
+  .modal-footer {
+    border: 0;
+  }
+  .modal-header {
+    padding: 25px 25px 15px 25px;
+    text-align: right;
+    .close {
+      float: none;
+      margin: 0;
+      font-size: 36px;
+      color: #fff;
+      font-weight: 300;
+      text-shadow: none;
+      opacity: 1;
+    }
+  }
+}
+
+.modal-backdrop.show {
+  background: #000;
+  opacity: .9;
+}

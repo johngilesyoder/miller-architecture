@@ -4,14 +4,15 @@
 
 <?php $detect = new Mobile_Detect; ?>
 
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-4">
-      <div class="page-title">
-        <h1>Portfolio</h1>
+<main role="main">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="page-title">
+          <h1>Portfolio</h1>
+        </div>
       </div>
-    </div>
-    <div class="col-md-8">
+      <div class="col-md-8">
       <?php if ( $detect->isMobile() ) : ?>
         <select id="category" class="portfolio-categories-dropdown form-control">
 
@@ -52,17 +53,14 @@
           ) ); ?>
         </ul>
       <?php endif; ?>
+      </div>
     </div>
-  </div>
-</div>
 
-<main role="main">
-	<div class="container-fluid">
+
     <div class="project-blocks">
-
       <?php get_template_part('loop-projects'); ?>
-
     </div>
+
   </div>
 </main>
 

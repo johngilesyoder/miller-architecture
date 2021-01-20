@@ -1,12 +1,12 @@
 
-<div class="container-fluid">
+<div class="container">
 	<footer class="site-footer">
 		<div class="row">
-			<div class="col-lg-8 order-lg-2">
+			<div class="col-lg-4 order-lg-2">
 				<div class="row">
 					<div class="col-lg-12">
 						<p class="footer-callout">
-							We would love to talk about your project’s potential; contact us at 406.551.6950 or <a href="mailto:info@miller-roodell.com">info@miller-roodell.com</a>.
+							We would love to talk about your project’s potential; contact us at 406.551.6950 | <a href="mailto:info@miller-roodell.com">info@miller-roodell.com</a>.
 						</p>
 					</div>
 				</div>
@@ -17,7 +17,12 @@
 					113 East Oak Street, Suite 2A<br>
 					Bozeman, Montana 59715
 				</address>
-			</div>
+      </div>
+      <div class="col-lg-4 order-lg-3">
+        <div class="ml-badge">
+          <img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/badge-ml.png" />
+        </div>
+      </div>
 		</div>
 		<div class="row">
 			<div class="col-lg-4">
@@ -25,7 +30,7 @@
 					&copy; <?php echo date('Y');?> Miller Roodell Architects. All Rights Reserved.
 				</div>
 			</div>
-			<div class="col-lg-7">
+			<div class="col-lg-4">
 				<div class="footer-social">
 					<a href="http://pinterest.com/millerarchitect/" target="_blank">
 						<img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/icon-pinterest.svg" />
