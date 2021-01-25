@@ -4,13 +4,12 @@
     display: flex;
     align-items: center;
     @include tablet-lg {
-      padding: 50px 0;
+      flex-flow: row wrap;
+      padding: 25px 0;
     }
     @include tablet {
-      padding: 40px 0;
-    }
-    @include mobile {
-      padding: 30px 0;
+      flex-flow: row wrap;
+      padding: 25px 0;
     }
     h2 {
       width: 33.3333%;
@@ -23,16 +22,35 @@
       text-align: right;
       font-weight: 500;
       border-right: 2px solid $black;
+      @include tablet-lg {
+        margin: 0 0 15px;
+        font-size: 21px;
+        width: 100%;
+        padding: 0;
+        text-align: left;
+        letter-spacing: 2px;
+        border: 0;
+        padding: 0;
+      }
       @include tablet {
         margin: 0 0 15px;
-        font-size: 50px;
-      }
-      @include mobile {
-        font-size: 42px;
+        font-size: 21px;
+        width: 100%;
+        padding: 0;
+        text-align: left;
+        letter-spacing: 2px;
+        border: 0;
+        padding: 0;
       }
     }
     .homepage-summary {
       width: 66.6666%;
+      @include tablet-lg {
+        width: 100%;
+      }
+      @include tablet {
+        width: 100%;
+      }
     }
     p {
       font-family: $font-family-sans-serif;
@@ -41,40 +59,13 @@
       margin: 0;
       padding: 0 0 0 25px;
       line-height: 1.25em;
+      @include tablet-lg {
+        padding: 0;
+        font-size: 16px;
+      }
       @include tablet {
-        font-size: 21px;
-      }
-      @include mobile {
-        font-size: 18px;
-      }
-    }
-    .intro-actions {
-      margin-top: 60px;
-      @include tablet {
-        margin-top: 40px;
-      }
-      @include mobile {
-        margin-top: 30px;
-      }
-      .btn-solid {
-        @include mobile {
-          width: 100%;
-        }
-      }
-      .or {
-        margin-top: 20px;
-        span {
-          font-size: 18px;
-          font-style: italic;
-          margin-right: 5px;
-        }
-        .btn-strip {
-          font-size: 13px;
-          font-family: $font-family-sans-serif;
-          text-transform: uppercase;
-          letter-spacing: 1.85px;
-          font-weight: 600;
-        }
+        padding: 0;
+        font-size: 16px;
       }
     }
   }

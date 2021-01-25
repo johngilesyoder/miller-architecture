@@ -2,10 +2,28 @@
   margin: 0 0 50px;
   display: flex;
   align-items: flex-start;
+  flex-flow: row wrap;
+  @include tablet-lg {
+    margin: 0 0 25px;
+  }
+  @include tablet {
+    margin: 0 0 25px;
+  }
   .block-photo-wrapper {
     width: 33.3333%;
     margin: 0;
     padding: 0 25px 0 0;
+    @include tablet-lg {
+      padding: 0 12.5px 0 0;
+    }
+    @include tablet {
+      padding: 0 12.5px 0 0;
+    }
+    @include mobile {
+      width: 100%;
+      padding: 0;
+      margin: 0 0 25px;
+    }
   }
   .block-photo {
     background-color: $grey-bg;
@@ -14,11 +32,30 @@
     overflow: hidden;
     height: 0;
     padding-top: 66.6666%;
+    @include tablet-lg {
+      padding-top: 80%;
+    }
+    @include tablet {
+      padding-top: 80%;
+    }
+    @include mobile {
+      padding-top: 56.6666%;
+    }
   }
   .block-content {
     width: 66.6666%;
     padding: 0 0 0 25px;
     margin: 0;
+    @include tablet-lg {
+      padding: 0 0 0 12.5px;
+    }
+    @include tablet {
+      padding: 0 0 0 12.5px;
+    }
+    @include mobile {
+      width: 100%;
+      padding: 0;
+    }
   }
   .block-title {
     font-size: 21px;
@@ -32,6 +69,10 @@
       letter-spacing: 1.1px;
       color: #999;
       margin-left: 3px;
+      @include mobile {
+        display: block;
+        margin-left: 0;
+      }
     }
   }
   .block-summary {

@@ -27,7 +27,7 @@ $page_statement = get_field( "page_statement" );
         <section class="page-intro">
           <h2 class="page-statement"><?php echo($page_header); ?></h2>
           <div class="page-summary">
-            <?php echo($page_statement); ?>
+            <p><?php echo($page_statement); ?></p>
           </div>
         </section>
       <?php endif; ?>

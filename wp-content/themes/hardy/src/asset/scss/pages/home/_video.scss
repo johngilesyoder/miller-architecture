@@ -2,10 +2,7 @@
   .home-video {
     margin: 0 0 50px;
     @include tablet {
-      margin: 0 0 40px;
-    }
-    @include mobile {
-      margin: 0 0 30px;
+      margin: 0;
     }
     .video-preview {
       overflow: hidden;
@@ -13,20 +10,15 @@
       padding-top: 56.25%;
       background: $grey-bg;
       position: relative;
-      @include tablet-lg {
-        height: 60vw;
-        margin: 0 0 30px;
-      }
-      @include tablet {
-        height: 80vw;
-        margin: 0 0 30px;
-      }
       .btn-video {
         position: absolute;
         bottom: 50px;
         left: 50%;
         transform: translateX(-50%);
         z-index: 100;
+        @include tablet {
+          bottom: 25px;
+        }
       }
       video#bgvid { 
         position: absolute;

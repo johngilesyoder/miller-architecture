@@ -3,6 +3,25 @@
 
 .site-footer {
   margin: 50px 0;
+  @include tablet-lg {
+    text-align: center;
+    margin: 25px 0;
+  }
+  @include tablet {
+    text-align: center;
+    margin: 25px 0;
+  }
+  address,
+  .footer-company,
+  .footer-callout,
+  .footer-social {
+    @include tablet-lg {
+      margin: 0 0 25px;
+    }
+    @include tablet {
+      margin: 0 0 25px;
+    }
+  }
   address {
     line-height: 1.5;
     font-size: 14px;
@@ -22,9 +41,21 @@
   .footer-company {
     font-size: 14px;
     margin-top: 5px;
+    @include tablet-lg {
+      margin-top: 0;
+    }
+    @include tablet {
+      margin-top: 0;
+    }
   }
   .ml-badge {
     text-align: right;
+    @include tablet-lg {
+      display: none;
+    }
+    @include tablet {
+      display: none;
+    }
     img {
       max-width: 150px;
     }
@@ -35,9 +66,21 @@
     line-height: 1.5;
     text-align: center;
     font-family: $font-family-sans-serif;
+    @include tablet-lg {
+      margin-top: 0;
+    }
+    @include tablet {
+      margin-top: 0;
+    }
   }
   .footer-social {
     text-align: center;
+    @include tablet-lg {
+      margin: 0;
+    }
+    @include tablet {
+      margin: 0;
+    }
     a {
       display: inline-block;
       margin-right: 15px;
@@ -51,74 +94,4 @@
       }
     }
   }
-}
-
-
-// Media Queries
-// --------------------------------------------------
-
-// Large desktop and up
-@media (min-width: 1200px) {}
-
-// Desktop to large desktop
-@media (min-width: 992px) and (max-width: 1199px) {}
-
-// Tablet to desktop
-@media (min-width: 768px) and (max-width: 991px) {
-
-  .site-footer {
-    text-align: center;
-    .ml-badge {
-      margin: 0 0 50px;
-      text-align: center;
-    }
-    address,
-    .footer-company,
-    .footer-callout,
-    .footer-social {
-      margin: 0 0 50px;
-    }
-  }
-
-}
-
-// Up to tablet
-@media (max-width: 767px) {
-
-  .site-footer {
-    text-align: center;
-    .ml-badge {
-      margin: 0 0 50px;
-      text-align: center;
-    }
-    address,
-    .footer-company,
-    .footer-callout,
-    .footer-social {
-      margin: 0 0 50px;
-    }
-  }
-
-}
-
-// Up to landscape phone
-@media (max-width: 480px) {
-
-  .site-footer {
-    margin: 30px 0;
-    text-align: center;
-    .ml-badge {
-      margin: 0 0 30px;
-    }
-    address,
-    .footer-company,
-    .footer-callout,
-    .footer-social {
-      margin: 0 0 30px;
-    }
-    .footer-callout {
-      font-size: 21px;
-    }
-  }
-
 }
