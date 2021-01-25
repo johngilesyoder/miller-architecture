@@ -15,53 +15,98 @@
 
 <?php while (have_posts()) : the_post(); ?>
 
-	<main role="main">
-		<div class="container-fluid">
-			<!-- PROJECT TITLE -->
-			<h1 class="page-title"><?php the_title(); ?></h1>
-			<!-- PROJECT SHORT SUMMARY -->
-			<p class="project-short-summary"><?php echo $project_short_summary; ?></p>
+  <main role="main">
+		<div class="container">
+
+      <h1 class="page-title"><?php the_title(); ?></h1>
+
+      <div class="flickity-slider wrapper">
+        <div class="carousel">
+          <?php
+            // helper function to return first regex match
+            function get_match( $regex, $content ) {
+                preg_match($regex, $content, $matches);
+                return $matches[1];
+            }
+            // Extract the shortcode arguments from the $page or $post
+            $shortcode_args = shortcode_parse_atts(get_match('/\[gallery\s(.*)\]/isU', $post->post_content));
+
+            // get the ids specified in the shortcode call
+            $ids = explode(",",$shortcode_args["ids"]);
+            foreach ( $ids as $current_id ) {
+              echo '<div class="gallery-cell" data-flickity-bg-lazyload="' . wp_get_attachment_image_src( $current_id, "full", false)[0]. '"></div>';
+            }
+          ?>
+
+        </div>
+      </div>
+
 			<!-- PROJECT GALLERY -->
 			<div class="project-carousel gallery is-hidden">
-				<?php
-					// helper function to return first regex match
-					function get_match( $regex, $content ) {
-					    preg_match($regex, $content, $matches);
-					    return $matches[1];
-					}
-					// Extract the shortcode arguments from the $page or $post
-					$shortcode_args = shortcode_parse_atts(get_match('/\[gallery\s(.*)\]/isU', $post->post_content));
+				
+      </div>
+      
+      <section class="page-intro">
+        <h2 class="page-statement"><?php echo $project_short_summary; ?></h2>
+        <div class="page-summary">
+          <div class="details-build">
+            <ul>
+              <?php if ( $project_location !== '' ) : ?>
+                <li><span class="detail-title">Location:</span> <span class="detail-value"><?php echo $project_location; ?></span></li>
+              <?php endif; ?>
+              <?php if ( $project_square_footage !== '' ) : ?>
+                <li><span class="detail-title">Area:</span> <span class="detail-value"><?php echo $project_square_footage; ?> sf</span></li>
+              <?php endif; ?>
+              <?php if ( $project_completion_date !== '' ) : ?>
+                <li><span class="detail-title">Completion Date:</span> <span class="detail-value"><?php echo $project_completion_date; ?></span></li>
+              <?php endif; ?>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-					// get the ids specified in the shortcode call
-					$ids = explode(",",$shortcode_args["ids"]);
-					foreach ( $ids as $current_id ) {
-						echo '<div>';
-						echo '<img data-flickity-lazyload="' . wp_get_attachment_image_src( $current_id, "full", false)[0]. '" alt="' . get_post_meta($current_id, '_wp_attachment_image_alt', true) . '" />';
-						echo '<a class="pinit-button-custom" data-pin-do="buttonPin" data-pin-save="true" href="https://www.pinterest.com/pin/create/button/?url=' . get_permalink() . '&media=' . wp_get_attachment_image_src( $current_id, "full", false)[0] . '"></a>';
-						echo '</div>';
-					}
-				?>
-			</div>
+      <section class="content-blocks">
 
-			<div class="row">
+        <div class="content-block">
+          <div class="block-photo-wrapper">
+            <div class="block-photo" style="background-image:url('<?php echo (the_post_thumbnail_url()); ?>');"></div>
+          </div>
+          <div class="block-content">
+            <h2 class="block-title">
+              <?php the_title(); ?>
+              <?php if( has_term('', 'portfolio-category') ) : ?>
+                <span class="block-subtitle">
+                  <?php 
+
+                    $cat_array = ( get_the_terms( get_the_ID(), 'portfolio-category') ); 
+
+                    $cat_str = array(); 
+                    
+                    foreach ($cat_array as $cat) {
+                        
+                        $cat_str[] = $cat->name;
+
+                    }
+                    echo implode(" / ",$cat_str) . ''; 
+
+                  ?>
+                </span>
+              <?php endif; ?>
+            </h2>
+            <div class="block-summary">
+              <?php the_content(); ?>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+			<!-- <div class="row">
 				<div class="col-lg-8 order-lg-2">
-					<!-- PROJECT DETAILS -->
 					<section class="project-details">
 						<div class="row">
 							<div class="col-sm-6">
-								<div class="details-build">
-									<ul>
-										<?php if ( $project_location !== '' ) : ?>
-											<li><span class="detail-title">Location</span> <span class="detail-value"><?php echo $project_location; ?></span></li>
-										<?php endif; ?>
-										<?php if ( $project_square_footage !== '' ) : ?>
-											<li><span class="detail-title">Area</span> <span class="detail-value"><?php echo $project_square_footage; ?> sf</span></li>
-										<?php endif; ?>
-										<?php if ( $project_completion_date !== '' ) : ?>
-											<li><span class="detail-title">Completion Date</span> <span class="detail-value"><?php echo $project_completion_date; ?></span></li>
-										<?php endif; ?>
-									</ul>
-								</div>
+								
 								<div class="details-press">
 									<?php if( have_rows('project_press') ): ?>
 										<h4>Press</h4>
@@ -97,21 +142,11 @@
 						</div>
 					</section>
 				</div>
-				<!-- PROJECT CONTENT -->
-				<div class="col-lg-4 order-lg-1">
-			    <div <?php post_class('clearfix project-summary'); ?>>
-						<?php the_content(); ?>
-						<div class="project-actions">
-							<a class="back-link" href="/portfolio/">All Projects</a>
-							<a class="pinterest-share" data-pin-do="buttonBookmark" data-pin-custom="true" data-pin-save="false" href="https://www.pinterest.com/pin/create/button/">Share on Pinterest</a>
-						</div>
-					</div>
-				</div>
-      </div>
+      </div> -->
       
-      <?php if ($project_video): ?>
+      <?php // if ($project_video): ?>
         <!-- PROJECT VIDEO -->
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-md-12">
             <div class="project-video">
               <div class="video-wrapper">
@@ -119,26 +154,9 @@
               </div>
             </div>
           </div>
-        </div>
-      <?php endif; ?>
+        </div> -->
+      <?php // endif; ?>
 
-			<!-- FEATURED PROJECTS -->
-			<section class="featured-projects">
-				<h3>Featured Projects</h3>
-				<div class="project-blocks">
-					<!-- Loop through projects -->
-					<?php
-						$args = array( 'post_type' => 'portfolio', 'posts_per_page' => 3, 'tag' => 'featured' );
-						$loop = new WP_Query( $args );
-						while ( $loop->have_posts() ) : $loop->the_post();
-					?>
-
-						<?php get_template_part( 'includes/project-block' ); ?>
-
-					<?php endwhile; ?>
-					<?php wp_reset_query(); ?>
-				</div>
-			</section>
 		</div>
 	</main>
 

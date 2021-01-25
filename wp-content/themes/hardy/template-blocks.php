@@ -56,7 +56,7 @@ $page_statement = get_field( "page_statement" );
           </div>
 
         <?php endwhile; ?>
-        </div>
+        </section>
       <?php endif; ?>
 
 			<?php // while (have_posts()) : the_post(); ?>

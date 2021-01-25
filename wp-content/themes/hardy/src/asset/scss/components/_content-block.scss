@@ -17,9 +17,6 @@
       padding: 0 12.5px 0 0;
     }
     @include tablet {
-      padding: 0 12.5px 0 0;
-    }
-    @include mobile {
       width: 100%;
       padding: 0;
       margin: 0 0 25px;
@@ -36,9 +33,6 @@
       padding-top: 80%;
     }
     @include tablet {
-      padding-top: 80%;
-    }
-    @include mobile {
       padding-top: 56.6666%;
     }
   }
@@ -50,9 +44,6 @@
       padding: 0 0 0 12.5px;
     }
     @include tablet {
-      padding: 0 0 0 12.5px;
-    }
-    @include mobile {
       width: 100%;
       padding: 0;
     }
@@ -69,7 +60,7 @@
       letter-spacing: 1.1px;
       color: #999;
       margin-left: 3px;
-      @include mobile {
+      @include tablet {
         display: block;
         margin-left: 0;
       }

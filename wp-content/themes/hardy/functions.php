@@ -96,34 +96,6 @@ function miller_header_scripts() {
 
 // Load conditional scripts
 function miller_conditional_scripts() {
-
-  // IF is not Homepage or Community or Project
-  if (!is_singular('portfolio') && !is_page_template('template-community.php') && !is_front_page() && !is_admin()) {
-
-    wp_register_script('slick', get_template_directory_uri() . '/src/asset/js/lib/slick.min.js', array('jquery'), '1.8.1');
-    wp_enqueue_script('slick'); // Enqueue it!
-
-    function slick_init() {
-      echo '<script type="text/javascript">
-        jQuery(function($){
-          $(".gallery").slick({
-            autoplay: true,
-            autoPlaySpeed: 4000,
-            arrows: false,
-            dots: true,
-            infinite: true,
-            pauseOnFocus: false,
-            pauseOnHover: false,
-            speed: 3000,
-            fade: true,
-            cssEase: "linear"
-          });
-        });
-      </script>';
-    }
-    add_action('wp_footer', 'slick_init');
-    
-  }
   
   // IF Home Page
   if (is_front_page()) {
@@ -141,11 +113,11 @@ function miller_conditional_scripts() {
 
   // IF Project page single
   if ( is_singular('portfolio') ) {
-    wp_register_script('project', get_template_directory_uri() . '/dist/asset/js/project.js', array('jquery'), null, true);
-    wp_enqueue_script('project'); // Enqueue it!
+    //wp_register_script('project', get_template_directory_uri() . '/dist/asset/js/project.js', array('jquery'), null, true);
+    //wp_enqueue_script('project'); // Enqueue it!
   }
 
-    // IF Project page single
+    // IF Community Page template
     if ( is_page_template('template-community.php') ) {
       wp_register_script('community', get_template_directory_uri() . '/dist/asset/js/community.js', array('jquery'), null, true);
       wp_enqueue_script('community'); // Enqueue it!

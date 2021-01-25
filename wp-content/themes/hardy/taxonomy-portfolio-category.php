@@ -6,13 +6,8 @@
 
 <main role="main">
   <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <div class="page-title">
-          <h1>Portfolio</h1>
-        </div>
-      </div>
-      <div class="col-md-8">
+    <div class="page-title">
+      <h1>Portfolio</h1>
       <?php if ( $detect->isMobile() ) : ?>
         <select id="category" class="portfolio-categories-dropdown form-control">
 
@@ -53,7 +48,6 @@
           ) ); ?>
         </ul>
       <?php endif; ?>
-      </div>
     </div>
 
 

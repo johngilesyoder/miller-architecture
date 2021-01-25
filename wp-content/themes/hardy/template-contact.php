@@ -26,12 +26,12 @@ $page_statement = get_field( "page_statement" );
       <section class="page-intro">
         <h2 class="page-statement"><?php echo($page_header); ?></h2>
         <div class="page-summary">
-        <address>
-          113 East Oak Street, Suite 2A<br>
-          Bozeman, Montana 59715<br>
-          406.551.6950<br>
-          <a href="mailto: info@miller-roodell.com">info@miller-roodell.com</a>
-        </address>
+          <address>
+            113 East Oak Street, Suite 2A<br>
+            Bozeman, Montana 59715<br>
+            406.551.6950<br>
+            <a href="mailto: info@miller-roodell.com">info@miller-roodell.com</a>
+          </address>
         </div>
       </section>
       
@@ -58,7 +58,7 @@ $page_statement = get_field( "page_statement" );
               <p>Positions for which we are currently seeking candidates are:</p>
               <ul class="career-opportunities">
                 <li><a href="/career-opportunities/">Architectural Intern</a></li>
-                <li><a href="/career-opportunities/">Project Managerr</a></li>
+                <li><a href="/career-opportunities/">Project Manager</a></li>
                 <li><a href="/career-opportunities/">Office Dog</a></li>
               </ul>
             </div>
