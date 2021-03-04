@@ -10,7 +10,7 @@ $second_page_statement = get_field( "second_page_statement" );
   <div class="container">
     <h1 class="page-title"><?php the_title(); ?></h1>
     <!-- post thumbnail -->
-    <section class="page-masthead" style="background-image:url('<?php echo get_template_directory_uri(); ?>/dist/asset/img/soccer-2.gif');"></section>
+    <section class="page-masthead" style="background-image:url('<?php echo get_template_directory_uri(); ?>/dist/asset/img/comm-hero-01.gif');"></section>
 
     <?php if ( $page_header ) : ?>
       <section class="page-intro">
@@ -21,16 +21,20 @@ $second_page_statement = get_field( "second_page_statement" );
       </section>
     <?php endif; ?>
 
-    <section class="content-blocks">
+    <section class="content-blocks projects">
       <div class="content-block">
         <div class="block-photo-wrapper">
           <div class="block-photo" style="background-image:url('<?php echo get_template_directory_uri(); ?>/dist/asset/img/project-library.jpg');"></div>
         </div>
         <div class="block-content">
-          <h2 class="block-title">Public Library <span class="block-subtitle">White Sulphur Springs, MT</span></h2>
+          <h2 class="block-title">Meagher County City Library</h2>
+          <span class="block-subtitle">
+            White Sulphur Springs, MT<br>
+            4,700 SF &nbsp;|&nbsp; Completed March 2018
+          </span>
           <div class="block-summary">
-            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit. Vestibulum id ligula porta felis euismod semper.</p>
-            <p>4,500 SF &nbsp;|&nbsp; Completed December 2017</p>
+            <p>This public library and community center project was completed pro bono and opened its doors to the rural ranch community of White Sulphur Springs in 2018. The ADA compliant design facilitates a wide range of activities and public functions that support the library’s mission of promoting lifelong learning, a love of reading, and access to information across all demographics.</p>
+            <p>The multifunctional building is not just a public library in the traditional sense, though of course there is lots of room for a growing book collection. Its spaces are adaptable to a wide range of uses, just as libraries today find themselves providing a wide array of community services, materials, and technology – everything from after school learning programs to computer labs, a public meeting room to a Montana Lounge for reading, and a Historical Archive that celebrates the history of the surrounding area.</p>
           </div>
         </div>
       </div>
@@ -40,10 +44,28 @@ $second_page_statement = get_field( "second_page_statement" );
           <div class="block-photo" style="background-image:url('<?php echo get_template_directory_uri(); ?>/dist/asset/img/project-soccer.jpg');"></div>
         </div>
         <div class="block-content">
-          <h2 class="block-title">North Side Soccer Facility <span class="block-subtitle">Livingston, MT</span></h2>
+          <h2 class="block-title">Northside Park & Dickerson Soccer Fields</h2>
+          <span class="block-subtitle">
+            Livingston, MT<br>
+            3,900 SF heated | 650 SF outdoor   |   Completed December 2017
+          </span>
           <div class="block-summary">
-            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit. Vestibulum id ligula porta felis euismod semper.</p>
-            <p>4,500 SF &nbsp;|&nbsp; Completed December 2017</p>
+            <p>Livingston, Montana’s Northside Park & Dickerson Soccer Fields was a community partnership between the City of Livingston and Livingston Youth Soccer Association (LYSA). Home to LYSA Raiders Soccer Club, the park has three full-sized soccer fields, a walking path, and beautiful views. It is also home to the Northside Park Field House and Event Center. The facility is available for rent, and also houses a concession stand and restrooms.</p>
+            <p>Miller Roodell Architects became involved during the earliest stages of the project in 2011. Beginning with initial concepts, we designed the facility, assisted in fundraising efforts, secured approvals, and through 2015 – 2017 solicited bids and guided the project to the finish through construction administration.</p>
+            <p>Several members of our team are proud to call Livingston home, and Miller Roodell has strong ties to the city. We are proud to have helped realize LYSA Board of Directors President Jeff Dickerson’s vision for Livingston’s Northside Park: an athletically-oriented community center, where young athletes and guests find shelter from the elements and comfortable spaces to spectate during soccer games and tournaments.</p>
+            <p>Contributing Project Team & Community Partners:<br>
+              LYSA – Board of Directors &nbsp;|&nbsp; Jeff Dickerson, President</p>
+            <p>
+              Surveyor &nbsp;|&nbsp; Hallin & Associates<br>
+              Geotechnical &nbsp;|&nbsp; Castle Rock Geotechnical Engineering, Inc.<br>
+              Civil &nbsp;|&nbsp; CTA Architects Engineers<br>
+              Structural &nbsp;|&nbsp; Beaudette Consulting Engineers, Inc. [ now DCI Engineers ]<br>
+              Lighting Design &nbsp;|&nbsp; Elements Lighting <br>
+              Project Manual &nbsp;|&nbsp; Bechtle Architects<br>
+              Budget Estimating &nbsp;|&nbsp; Battle Ridge Construction<br>
+              Construction Management &nbsp;|&nbsp; Allen Construction Management<br>
+              General &nbsp;|&nbsp; Spring Construction
+            </p>
           </div>
         </div>
       </div>
