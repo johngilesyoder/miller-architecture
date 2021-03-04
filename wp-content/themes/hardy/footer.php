@@ -38,14 +38,8 @@
 					<a href="http://www.houzz.com/pro/ctm7057/miller-architects-ltd" target="_blank">
 						<img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/icon-houzz.svg" />
 					</a>
-					<a href="https://plus.google.com/102393456806890657332" target="_blank">
-						<img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/icon-googleplus.svg" />
-					</a>
 					<a href="http://www.facebook.com/MillerArchitectsPc" target="_blank">
 						<img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/icon-facebook.svg" />
-					</a>
-					<a href="http://www.twitter.com/CMarchitectsMT" target="_blank">
-						<img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/icon-twitter.svg" />
 					</a>
 				</div>
 			</div>
