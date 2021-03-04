@@ -38,7 +38,7 @@ $page_statement = get_field( "page_statement" );
       <section class="content-blocks">
         <div class="content-block">
           <div class="block-photo-wrapper">
-            <div class="block-photo" style="background-image:url('<?php echo esc_url($photo['url']); ?>');"></div>
+            <div class="block-photo" style="background-image:url('<?php echo get_template_directory_uri(); ?>/dist/asset/img/contact-timg-01.jpg');"></div>
           </div>
           <div class="block-content">
             <h2 class="block-title">Send us a message</h2>
@@ -47,24 +47,8 @@ $page_statement = get_field( "page_statement" );
             </div>
           </div>
         </div>
-        <div class="content-block">
-          <div class="block-photo-wrapper">
-            <div class="block-photo" style="background-image:url('<?php echo esc_url($photo['url']); ?>');"></div>
-          </div>
-          <div class="block-content">
-            <h2 class="block-title">View our Career Opportunities</h2>
-            <div class="block-summary">
-              <p>If you want to join a team of highly-driven, self-motivated, hard-working talented creative professionals, then we want to hear from you.</p>
-              <p>Positions for which we are currently seeking candidates are:</p>
-              <ul class="career-opportunities">
-                <li><a href="/career-opportunities/">Architectural Intern</a></li>
-                <li><a href="/career-opportunities/">Project Manager</a></li>
-                <li><a href="/career-opportunities/">Office Dog</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+        
+      </section>
 
 			<?php // while (have_posts()) : the_post(); ?>
 			  <!-- <div <?php post_class('clearfix'); ?>>
