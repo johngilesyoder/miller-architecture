@@ -43,7 +43,9 @@ $page_statement = get_field( "page_statement" );
 
           <div class="content-block">
             <div class="block-photo-wrapper">
-              <div class="block-photo" style="background-image:url('<?php echo esc_url($photo['url']); ?>');"></div>
+              <?php if($photo) : ?>
+                <div class="block-photo" style="background-image:url('<?php echo esc_url($photo['url']); ?>');"></div>
+              <?php endif; ?>
             </div>
             <div class="block-content">
               <?php if( $title ): ?>
