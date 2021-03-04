@@ -1,15 +1,36 @@
-<?php /* Template Name: Home */ get_header(); ?>
+<?php /* Template Name: Home */ get_header();
+$page_header = get_field( "page_custom_header" );
+$page_statement = get_field( "page_statement" );
+?>
 
 	<main role="main">
     <div class="container">
 
       <!--/* Hero ===================== */-->
       <!--/* ========================== */-->
-      <?php get_template_part( 'includes/home/hero' ); ?>
+      <!-- If gallery -->
+      <?php if( have_rows('gallery') ): ?>
+        <div class="flickity-slider wrapper">
+          <div class="carousel">
+          <?php while( have_rows('gallery') ): the_row(); 
+            $image = get_sub_field('image');
+          ?>
 
-      <!--/* Intro ==================== */-->
-      <!--/* ========================== */-->
-      <?php get_template_part( 'includes/home/intro' ); ?>
+            <div class="gallery-cell" data-flickity-bg-lazyload="<?php echo esc_url($image['url']); ?>"></div>
+
+          <?php endwhile; ?>
+          </div>
+        </div>
+      <?php endif; ?>
+
+      <?php if ( $page_header ) : ?>
+        <section class="page-intro">
+          <h2 class="page-statement"><?php echo($page_header); ?></h2>
+          <div class="page-summary">
+            <p><?php echo($page_statement); ?></p>
+          </div>
+        </section>
+      <?php endif; ?>
 
       <!--/* Testimonial ============== */-->
       <!--/* ========================== */-->
