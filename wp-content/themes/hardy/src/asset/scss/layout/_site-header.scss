@@ -125,7 +125,8 @@
           &:hover {
             color: #000;
           }
-          &:focus {
+          &:focus,
+          &:active {
             background: transparent;
           }
         }
