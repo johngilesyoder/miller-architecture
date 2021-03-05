@@ -46,9 +46,11 @@ $page_statement = get_field( "page_statement" );
             <div class="block-photo-wrapper">
               <?php if($photo) : ?>
                 <div class="block-photo" style="background-image:url('<?php echo esc_url($photo['url']); ?>');"></div>
-                <div class="block-tertiary-info">
-                  <?php echo($tertiary); ?>
-                </div>
+                <?php if($tertiary) : ?>
+                  <div class="block-tertiary-info">
+                    <?php echo($tertiary); ?>
+                  </div>
+                <?php endif; ?>
               <?php endif; ?>
             </div>
             <div class="block-content">
