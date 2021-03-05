@@ -59,11 +59,24 @@
       font-weight: 400;
       letter-spacing: 1.1px;
       color: #999;
-      margin-left: 3px;
+      margin-left: 10px;
       @include tablet {
         display: block;
         margin-left: 0;
       }
+    }
+  }
+  .block-tertiary-info {
+    font-family: $font-family-sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #999;
+    margin-top: 5px;
+    text-align: right;
+    @include tablet {
+      display: block;
+      margin-left: 0;
+      text-align: left;
     }
   }
   .block-summary {

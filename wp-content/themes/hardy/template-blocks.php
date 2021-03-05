@@ -39,12 +39,16 @@ $page_statement = get_field( "page_statement" );
           $title = get_sub_field('block_title');
           $subtitle = get_sub_field('block_subtitle');
           $summary = get_sub_field('block_summary');
+          $tertiary = get_sub_field('block_tertiary_info');
         ?>
 
           <div class="content-block">
             <div class="block-photo-wrapper">
               <?php if($photo) : ?>
                 <div class="block-photo" style="background-image:url('<?php echo esc_url($photo['url']); ?>');"></div>
+                <div class="block-tertiary-info">
+                  <?php echo($tertiary); ?>
+                </div>
               <?php endif; ?>
             </div>
             <div class="block-content">
