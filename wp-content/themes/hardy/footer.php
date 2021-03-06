@@ -20,7 +20,7 @@
       </div>
       <div class="col-lg-4 order-lg-3">
         <div class="ml-badge">
-          <img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/badge-ml.png" />
+          <img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/badge-ml.png?=1" />
         </div>
       </div>
 		</div>
