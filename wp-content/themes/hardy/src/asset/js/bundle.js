@@ -1,7 +1,6 @@
 var jQueryBridget = require('jquery-bridget');
 var Flickity = require('flickity');
 var asNavFor = require('flickity-as-nav-for');
-var bgLazyLoad = require('flickity-bg-lazyload');
 var fade = require('flickity-fade');
 
 // Use Flickity with jQuery via jQuery Bridget
@@ -10,33 +9,25 @@ jQueryBridget( 'flickity', Flickity, $ );
 
 $(document).ready(() => {
 
-  // Flickity options, defaults
-  var options = {
-    initialIndex: 0,
-    wrapAround: true,
-    // lazyLoad: 2,
+  var $carousel = jQuery('.gallery').removeClass('is-hidden');
+	// trigger redraw for transition
+	$carousel[0].offsetHeight;
+	// init Flickity
+	$carousel.flickity({
+		// options
+		cellAlign: 'center',
+		contain: true,
+		initialIndex: 0,
+		wrapAround: true,
+		imagesLoaded: true,
+		//pageDots: false,
+		setGallerySize: false,
+		lazyLoad: 2,
+    autoPlay: 4000,
     prevNextButtons: false,
-    autoPlay: true,
-    draggable: false,
-    pauseAutoPlayOnHover: false,
-    imagesLoaded: true, 
-    setGallerySize: false,
-    bgLazyLoad: true,
-    cellAlign: "left"
-  };
+    pauseAutoPlayOnHover: false
+	});
 
-  // enable prev/next buttons at 768px
-  if ( matchMedia('screen and (min-width: 768px)').matches ) {
-    options.fade = true
-  }
-
-  // show
-  var $carousel = $('.carousel').removeClass('is-hidden');
-  // trigger redraw for transition
-  $carousel[0].offsetHeight;
-  // init Flickity
-  $carousel.flickity(options);
-
-  $carousel.addClass('flickity-loaded');
+	$carousel.addClass('flickity-loaded');
 
 });
