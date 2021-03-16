@@ -128,7 +128,7 @@ function miller_conditional_scripts() {
 // Load styles
 function miller_styles() {
 
-  wp_register_style('styles', get_template_directory_uri() . '/dist/asset/css/bundle.css', array(), '1.0.5', 'all');
+  wp_register_style('styles', get_template_directory_uri() . '/dist/asset/css/bundle.css', array(), '1.0.6', 'all');
   wp_enqueue_style('styles'); // Enqueue it!
 
 }

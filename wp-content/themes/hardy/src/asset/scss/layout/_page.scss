@@ -162,7 +162,6 @@ h2.page-title {
 
 .feature-img {
   width: 100%;
-  margin: 0 0 60px;
 }
 
 .hidden { display: none; }
@@ -213,10 +212,6 @@ h2.page-title {
 @media (max-width: 767px) {
 
   main {
-    margin: 0 0 30px;
-  }
-
-  .feature-img {
     margin: 0 0 30px;
   }
 

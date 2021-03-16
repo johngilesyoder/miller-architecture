@@ -18,6 +18,8 @@ $page_statement = get_field( "page_statement" );
             </div>
           <?php endwhile; ?>
         </div>
+      <?php elseif(has_post_thumbnail() ) : ?>
+        <img class="feature-img" src="<?php the_post_thumbnail_url(); ?>">
       <?php endif; ?>
       
 			<?php if ( $page_header ) : ?>
