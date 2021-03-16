@@ -6,18 +6,9 @@ $page_statement = get_field( "page_statement" );
 	<main role="main">
     <div class="container">
 
-      <!-- PROJECT GALLERY -->
-      <?php if( have_rows('gallery') ): ?>
-        <div class="gallery is-hidden">
-          <?php while( have_rows('gallery') ): the_row(); 
-            $image = get_sub_field('image');
-          ?>
-            <div>
-              <img data-flickity-lazyload="<?php echo esc_url($image['url']); ?>" alt="[alt]" />
-            </div>
-          <?php endwhile; ?>
-        </div>
-      <?php endif; ?>
+      <!--/* HERO ============== */-->
+      <!--/* ========================== */-->
+      <?php get_template_part( 'includes/hero' ); ?>
 
       <?php if ( $page_header ) : ?>
         <section class="page-intro">

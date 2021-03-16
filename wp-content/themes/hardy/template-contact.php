@@ -8,18 +8,9 @@ $page_statement = get_field( "page_statement" );
 
       <h1 class="page-title"><?php the_title(); ?></h1>
 
-      <!-- If gallery -->
-      <?php if( have_rows('gallery') ): ?>
-        <div class="project-carousel gallery is-hidden">
-          <?php while( have_rows('gallery') ): the_row(); 
-            $image = get_sub_field('image');
-          ?>
-            <div>
-              <img data-flickity-lazyload="<?php echo esc_url($image['url']); ?>" alt="[alt]" />
-            </div>
-          <?php endwhile; ?>
-        </div>
-      <?php endif; ?>
+      <!--/* HERO ============== */-->
+      <!--/* ========================== */-->
+      <?php get_template_part( 'includes/hero' ); ?>
       
       <section class="page-intro">
         <h2 class="page-statement"><?php echo($page_header); ?></h2>

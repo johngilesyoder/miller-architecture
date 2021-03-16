@@ -8,19 +8,9 @@ $page_statement = get_field( "page_statement" );
 
       <h1 class="page-title"><?php the_title(); ?></h1>
 
-      <?php if( have_rows('gallery') ): ?>
-        <div class="gallery is-hidden">
-          <?php while( have_rows('gallery') ): the_row(); 
-            $image = get_sub_field('image');
-          ?>
-            <div>
-              <img data-flickity-lazyload="<?php echo esc_url($image['url']); ?>" alt="[alt]" />
-            </div>
-          <?php endwhile; ?>
-        </div>
-      <?php elseif(has_post_thumbnail() ) : ?>
-        <img class="feature-img" src="<?php the_post_thumbnail_url(); ?>">
-      <?php endif; ?>
+      <!--/* HERO ============== */-->
+      <!--/* ========================== */-->
+      <?php get_template_part( 'includes/hero' ); ?>
       
 			<?php if ( $page_header ) : ?>
         <section class="page-intro">
