@@ -1,54 +1,50 @@
-.flickity-slider {
-  background: #fff;
-  box-sizing: border-box;
-  margin: 0;
-  max-width: 1600px;
-  position: relative;
-}
-
-.wrapper:before {
-  display: block;
-  content: "";
-  padding-top: 56.25%;
-  width: 100%;
-}
-
-.carousel {
-  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-  width: 100%;
-  -webkit-transition: opacity .5s .5s;
-  transition: opacity .5s .5s;
+.gallery {
+  height: 600px;
   opacity: 0;
-  &.flickity-loaded {
+  transition: opacity .5s 1s;
+  @include tablet {
+    height: 320px;
+  }
+  &.is-hidden {
+    display: none;
+  }
+  &.flickity-enabled {
     opacity: 1;
   }
-}
-
-.gallery-cell {
-  width: 100%;
-  height: 100%;
-  margin-right: 10px;
-  background-color: #fff;
-  background-position: center center;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-.flickity-page-dots {
-  bottom: 50px;
-  @include tablet-lg {
-    bottom: 25px;
-  }
-  @include tablet {
-    bottom: 25px;
-  }
-  .dot {
-    background: #fff;
-    opacity: .6;
-    &.is-selected {
+  div.is-selected {
+    img {
       opacity: 1;
+    }
+  }
+  img {
+    margin: 0 12.5px;
+    height: 600px;
+    width: auto;
+    opacity: .5;
+    transition: opacity 150ms;
+    @include tablet {
+      height: 320px;
+    }
+  }
+  .flickity-page-dots {
+    bottom: 50px;
+    @include tablet-lg {
+      bottom: 25px;
+    }
+    @include tablet {
+      bottom: 25px;
+    }
+    .dot {
+      background: #fff;
+      opacity: .6;
+      @include tablet {
+        height: 6px;
+        width: 6px;
+        margin: 0 4px;
+      }
+      &.is-selected {
+        opacity: 1;
+      }
     }
   }
 }
