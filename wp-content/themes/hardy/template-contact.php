@@ -10,16 +10,14 @@ $page_statement = get_field( "page_statement" );
 
       <!-- If gallery -->
       <?php if( have_rows('gallery') ): ?>
-        <div class="flickity-slider wrapper">
-          <div class="carousel">
+        <div class="project-carousel gallery is-hidden">
           <?php while( have_rows('gallery') ): the_row(); 
             $image = get_sub_field('image');
           ?>
-
-            <div class="gallery-cell" data-flickity-bg-lazyload="<?php echo esc_url($image['url']); ?>"></div>
-
+            <div>
+              <img data-flickity-lazyload="<?php echo esc_url($image['url']); ?>" alt="[alt]" />
+            </div>
           <?php endwhile; ?>
-          </div>
         </div>
       <?php endif; ?>
       
