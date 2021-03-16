@@ -9,7 +9,7 @@ $page_statement = get_field( "page_statement" );
       <h1 class="page-title"><?php the_title(); ?></h1>
 
       <?php if( have_rows('gallery') ): ?>
-        <div class="project-carousel gallery is-hidden">
+        <div class="gallery is-hidden">
           <?php while( have_rows('gallery') ): the_row(); 
             $image = get_sub_field('image');
           ?>

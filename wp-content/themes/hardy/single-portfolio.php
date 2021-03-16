@@ -20,30 +20,22 @@
 
       <h1 class="page-title"><?php the_title(); ?></h1>
 
-      <div class="flickity-slider wrapper">
-        <div class="carousel">
-          <?php
-            // helper function to return first regex match
-            function get_match( $regex, $content ) {
-                preg_match($regex, $content, $matches);
-                return $matches[1];
-            }
-            // Extract the shortcode arguments from the $page or $post
-            $shortcode_args = shortcode_parse_atts(get_match('/\[gallery\s(.*)\]/isU', $post->post_content));
+      <div class="gallery is-hidden">
+        <?php
+          // helper function to return first regex match
+          function get_match( $regex, $content ) {
+              preg_match($regex, $content, $matches);
+              return $matches[1];
+          }
+          // Extract the shortcode arguments from the $page or $post
+          $shortcode_args = shortcode_parse_atts(get_match('/\[gallery\s(.*)\]/isU', $post->post_content));
 
-            // get the ids specified in the shortcode call
-            $ids = explode(",",$shortcode_args["ids"]);
-            foreach ( $ids as $current_id ) {
-              echo '<div class="gallery-cell" data-flickity-bg-lazyload="' . wp_get_attachment_image_src( $current_id, "full", false)[0]. '"></div>';
-            }
-          ?>
-
-        </div>
-      </div>
-
-			<!-- PROJECT GALLERY -->
-			<div class="project-carousel gallery is-hidden">
-				
+          // get the ids specified in the shortcode call
+          $ids = explode(",",$shortcode_args["ids"]);
+          foreach ( $ids as $current_id ) {
+            echo '<div><img data-flickity-lazyload="' . wp_get_attachment_image_src( $current_id, "full", false)[0]. '"></div>';
+          }
+        ?>
       </div>
       
       <section class="page-intro">

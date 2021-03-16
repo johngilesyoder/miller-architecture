@@ -33,65 +33,6 @@
       }
     }
   }
-  .gallery {
-    margin: 0 0 50px;
-    height: 600px;
-    opacity: 0;
-    -webkit-transition: opacity .5s 1s;
-    transition: opacity .5s 1s;
-    &.is-hidden {
-      display: none;
-    }
-    &.flickity-enabled {
-      opacity: 1;
-    }
-    div.is-selected {
-      img {
-        opacity: 1;
-      }
-      &:hover {
-        a[data-pin-log="button_pinit"] {
-          opacity: 1;
-        }
-      }
-    }
-    a[data-pin-log="button_pinit"] {
-      position: absolute;
-      top: 15px;
-      left: 20px;
-      opacity: 0;
-      transition: opacity 150ms;
-    }
-    img {
-      margin: 0 4px;
-      height: 600px;
-      width: auto;
-      opacity: .25;
-      transition: opacity 150ms;
-    }
-    .flickity-prev-next-button {
-      width: 60px;
-      height: 60px;
-      border-radius: 0;
-    }
-    .flickity-prev-next-button:hover {
-
-    }
-    /* arrow color */
-    .flickity-prev-next-button .arrow {
-      fill: rgba(0,0,0,.5);
-    }
-    .flickity-prev-next-button.no-svg {
-      color: white;
-    }
-    /* position outside */
-    .flickity-prev-next-button.previous {
-      left: -0px;
-    }
-    .flickity-prev-next-button.next {
-      right: -0px;
-    }
-  }
   .project-actions {
     margin-top: 40px;
     a {
@@ -197,13 +138,6 @@
 @media (min-width: 768px) and (max-width: 991px) {
 
   .single-portfolio {
-    .project-carousel {
-      margin: 0 -15px;
-      height: 500px;
-      img {
-        height: 500px;
-      }
-    }
     .project-details {
       margin: 0 -15px 30px;
     }
@@ -238,13 +172,6 @@
     .project-short-summary {
       font-size: 24px;
       margin: 0 0 30px;
-    }
-    .project-carousel {
-      margin: 0 -15px;
-      height: 400px;
-      img {
-        height: 400px;
-      }
     }
     .project-details {
       margin: 0 -15px 30px;

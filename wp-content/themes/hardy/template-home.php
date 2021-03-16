@@ -8,7 +8,7 @@ $page_statement = get_field( "page_statement" );
 
       <!-- PROJECT GALLERY -->
       <?php if( have_rows('gallery') ): ?>
-        <div class="project-carousel gallery is-hidden">
+        <div class="gallery is-hidden">
           <?php while( have_rows('gallery') ): the_row(); 
             $image = get_sub_field('image');
           ?>
