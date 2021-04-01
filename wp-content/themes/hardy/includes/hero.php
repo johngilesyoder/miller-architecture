@@ -4,7 +4,7 @@
       $image = get_sub_field('image');
     ?>
       <div>
-        <img data-flickity-lazyload="<?php echo esc_url($image['url']); ?>" alt="[alt]" />
+        <img src="<?php echo esc_url($image['url']); ?>" alt="[alt]" />
       </div>
     <?php endwhile; ?>
   </div>

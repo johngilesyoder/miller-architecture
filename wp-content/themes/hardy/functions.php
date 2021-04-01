@@ -113,8 +113,8 @@ function miller_conditional_scripts() {
 
   // IF Project page single
   if ( is_singular('portfolio') ) {
-    //wp_register_script('project', get_template_directory_uri() . '/dist/asset/js/project.js', array('jquery'), null, true);
-    //wp_enqueue_script('project'); // Enqueue it!
+    wp_register_script('project', get_template_directory_uri() . '/dist/asset/js/project.js', array('jquery'), null, true);
+    wp_enqueue_script('project'); // Enqueue it!
   }
 
     // IF Community Page template

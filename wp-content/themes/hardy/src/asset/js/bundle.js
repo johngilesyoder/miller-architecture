@@ -2,6 +2,7 @@ var jQueryBridget = require('jquery-bridget');
 var Flickity = require('flickity');
 var asNavFor = require('flickity-as-nav-for');
 var fade = require('flickity-fade');
+require('flickity-imagesloaded');
 
 // Use Flickity with jQuery via jQuery Bridget
 Flickity.setJQuery( $ );
@@ -20,12 +21,11 @@ $(document).ready(() => {
 		initialIndex: 0,
 		wrapAround: true,
 		imagesLoaded: true,
-		//pageDots: false,
 		setGallerySize: false,
-		lazyLoad: 2,
+		//lazyLoad: 2,
     autoPlay: 4000,
     prevNextButtons: false,
-    pauseAutoPlayOnHover: false
+    pauseAutoPlayOnHover: false,
 	});
 
 	$carousel.addClass('flickity-loaded');

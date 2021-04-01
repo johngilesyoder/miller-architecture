@@ -2,8 +2,55 @@
 // -----------------------------------------------------------------
 
 .single-portfolio {
-  .flickity-page-dots {
-    display: none;
+  .project-gallery {
+    height: 600px;
+    opacity: 0;
+    transition: opacity .5s 1s;
+    @include tablet {
+      height: 320px;
+    }
+    &.is-hidden {
+      display: none;
+    }
+    &.flickity-enabled {
+      opacity: 1;
+    }
+    div.is-selected {
+      img {
+        opacity: 1;
+      }
+    }
+    img {
+      margin: 0 12.5px;
+      height: 600px;
+      width: auto;
+      opacity: .5;
+      transition: opacity 150ms;
+      @include tablet {
+        height: 320px;
+      }
+    }
+    .flickity-page-dots {
+      bottom: 50px;
+      @include tablet-lg {
+        bottom: 25px;
+      }
+      @include tablet {
+        bottom: 25px;
+      }
+      .dot {
+        background: #fff;
+        opacity: .6;
+        @include tablet {
+          height: 6px;
+          width: 6px;
+          margin: 0 4px;
+        }
+        &.is-selected {
+          opacity: 1;
+        }
+      }
+    }
   }
   .details-build {
     ul {

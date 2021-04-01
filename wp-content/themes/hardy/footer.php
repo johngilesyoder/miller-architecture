@@ -32,6 +32,9 @@
 			</div>
 			<div class="col-lg-4">
 				<div class="footer-social">
+          <a href="http://instagram.com/millerroodell/" target="_blank">
+						<img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/icon-instagram.svg" /> 
+					</a>
 					<a href="http://pinterest.com/millerarchitect/" target="_blank">
 						<img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/icon-pinterest.svg" />
 					</a>

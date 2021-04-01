@@ -1,5 +1,5 @@
 .gallery {
-  height: 600px;
+  height: 654px;
   opacity: 0;
   transition: opacity .5s 1s;
   @include tablet {
@@ -17,11 +17,12 @@
     }
   }
   img {
-    margin: 0 12.5px;
-    height: 600px;
+    height: 654px;
+    margin: 0;
     width: auto;
     opacity: .5;
     transition: opacity 150ms;
+    display: block;
     @include tablet {
       height: 320px;
     }

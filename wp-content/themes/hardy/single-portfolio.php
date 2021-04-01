@@ -20,7 +20,7 @@
 
       <h1 class="page-title"><?php the_title(); ?></h1>
 
-      <div class="gallery is-hidden">
+      <div class="project-gallery is-hidden">
         <?php
           // helper function to return first regex match
           function get_match( $regex, $content ) {
