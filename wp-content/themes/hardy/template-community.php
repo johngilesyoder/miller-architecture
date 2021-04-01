@@ -21,55 +21,42 @@ $second_page_statement = get_field( "second_page_statement" );
       </section>
     <?php endif; ?>
 
-    <section class="content-blocks projects">
-      <div class="content-block">
-        <div class="block-photo-wrapper">
-          <div class="block-photo" style="background-image:url('<?php echo get_template_directory_uri(); ?>/dist/asset/img/project-library.jpg');"></div>
-        </div>
-        <div class="block-content">
-          <h2 class="block-title">Meagher County City Library</h2>
-          <span class="block-subtitle">
-            White Sulphur Springs, MT<br>
-            4,700 SF &nbsp;|&nbsp; Completed March 2018
-          </span>
-          <div class="block-summary">
-            <p>This public library and community center project was completed pro bono and opened its doors to the rural ranch community of White Sulphur Springs in 2018. The ADA compliant design facilitates a wide range of activities and public functions that support the library’s mission of promoting lifelong learning, a love of reading, and access to information across all demographics.</p>
-            <p>The multifunctional building is not just a public library in the traditional sense, though of course there is lots of room for a growing book collection. Its spaces are adaptable to a wide range of uses, just as libraries today find themselves providing a wide array of community services, materials, and technology – everything from after school learning programs to computer labs, a public meeting room to a Montana Lounge for reading, and a Historical Archive that celebrates the history of the surrounding area.</p>
-          </div>
-        </div>
-      </div>
 
-      <div class="content-block">
-        <div class="block-photo-wrapper">
-          <div class="block-photo" style="background-image:url('<?php echo get_template_directory_uri(); ?>/dist/asset/img/project-soccer.jpg');"></div>
-        </div>
-        <div class="block-content">
-          <h2 class="block-title">Northside Park & Dickerson Soccer Fields</h2>
-          <span class="block-subtitle">
-            Livingston, MT<br>
-            3,900 SF heated | 650 SF outdoor   |   Completed December 2017
-          </span>
-          <div class="block-summary">
-            <p>Livingston, Montana’s Northside Park & Dickerson Soccer Fields was a community partnership between the City of Livingston and Livingston Youth Soccer Association (LYSA). Home to LYSA Raiders Soccer Club, the park has three full-sized soccer fields, a walking path, and beautiful views. It is also home to the Northside Park Field House and Event Center. The facility is available for rent, and also houses a concession stand and restrooms.</p>
-            <p>Miller Roodell Architects became involved during the earliest stages of the project in 2011. Beginning with initial concepts, we designed the facility, assisted in fundraising efforts, secured approvals, and through 2015 – 2017 solicited bids and guided the project to the finish through construction administration.</p>
-            <p>Several members of our team are proud to call Livingston home, and Miller Roodell has strong ties to the city. We are proud to have helped realize LYSA Board of Directors President Jeff Dickerson’s vision for Livingston’s Northside Park: an athletically-oriented community center, where young athletes and guests find shelter from the elements and comfortable spaces to spectate during soccer games and tournaments.</p>
-            <p>Contributing Project Team & Community Partners:<br>
-              LYSA – Board of Directors &nbsp;|&nbsp; Jeff Dickerson, President</p>
-            <p>
-              Surveyor &nbsp;|&nbsp; Hallin & Associates<br>
-              Geotechnical &nbsp;|&nbsp; Castle Rock Geotechnical Engineering, Inc.<br>
-              Civil &nbsp;|&nbsp; CTA Architects Engineers<br>
-              Structural &nbsp;|&nbsp; Beaudette Consulting Engineers, Inc. [ now DCI Engineers ]<br>
-              Lighting Design &nbsp;|&nbsp; Elements Lighting <br>
-              Project Manual &nbsp;|&nbsp; Bechtle Architects<br>
-              Budget Estimating &nbsp;|&nbsp; Battle Ridge Construction<br>
-              Construction Management &nbsp;|&nbsp; Allen Construction Management<br>
-              General &nbsp;|&nbsp; Spring Construction
-            </p>
+    <?php if( have_rows('content_blocks') ): ?>
+      <section class="content-blocks projects">
+      <?php while( have_rows('content_blocks') ): the_row(); 
+        $photo = get_sub_field('block_photo');
+        $title = get_sub_field('block_title');
+        $subtitle = get_sub_field('block_subtitle');
+        $summary = get_sub_field('block_summary');
+        $tertiary = get_sub_field('block_tertiary_info');
+      ?>
+
+        <div class="content-block">
+          <div class="block-photo-wrapper">
+            <?php if($photo) : ?>
+              <div class="block-photo" style="background-image:url('<?php echo esc_url($photo['url']); ?>');"></div>
+              <?php if($tertiary) : ?>
+                <div class="block-tertiary-info">
+                  <?php echo($tertiary); ?>
+                </div>
+              <?php endif; ?>
+            <?php endif; ?>
+          </div>
+          <div class="block-content">
+            <?php if( $title ): ?>
+              <h2 class="block-title"><?php echo($title); ?></h2>
+              <span class="block-subtitle"><?php echo($subtitle); ?></span>
+            <?php endif; ?>
+            <div class="block-summary">
+              <?php echo($summary); ?>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+
+      <?php endwhile; ?>
+      </section>
+    <?php endif; ?>
 
     <?php if ( $second_page_header ) : ?>
       <section class="page-intro secondary">
@@ -80,7 +67,45 @@ $second_page_statement = get_field( "second_page_statement" );
       </section>
     <?php endif; ?>
 
-    <section class="content-blocks charities">
+
+    <?php if( have_rows('charity_blocks') ): ?>
+      <section class="content-blocks charities">
+      <?php while( have_rows('charity_blocks') ): the_row(); 
+        $photo = get_sub_field('block_photo');
+        $title = get_sub_field('block_title');
+        $subtitle = get_sub_field('block_subtitle');
+        $summary = get_sub_field('block_summary');
+        $tertiary = get_sub_field('block_tertiary_info');
+      ?>
+
+        <div class="content-block">
+          <div class="block-photo-wrapper">
+            <?php if($photo) : ?>
+              <div class="block-photo" style="background-image:url('<?php echo esc_url($photo['url']); ?>');"></div>
+              <?php if($tertiary) : ?>
+                <div class="block-tertiary-info">
+                  <?php echo($tertiary); ?>
+                </div>
+              <?php endif; ?>
+            <?php endif; ?>
+          </div>
+          <div class="block-content">
+            <?php if( $title ): ?>
+              <h2 class="block-title"><?php echo($title); ?></h2>
+            <?php endif; ?>
+            <div class="block-summary">
+              <?php echo($summary); ?>
+            </div>
+          </div>
+        </div>
+
+      <?php endwhile; ?>
+      </section>
+    <?php endif; ?>
+
+
+
+    <!-- <section class="content-blocks charities">
       <div class="content-block">
         <div class="block-photo-wrapper">
           <div class="block-photo" style="background-image:url('<?php echo get_template_directory_uri(); ?>/dist/asset/img/logo-reel-recovery.png');"></div>
@@ -106,7 +131,7 @@ $second_page_statement = get_field( "second_page_statement" );
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
 			<?php while (have_posts()) : the_post(); ?>
 			  <div <?php post_class('clearfix'); ?>>
