@@ -2,13 +2,13 @@
   height: 654px;
   opacity: 0;
   transition: opacity .5s 1s;
-  @include tablet-lg {
+  @include desktop {
     height: 548px;
   }
-  @include tablet {
+  @include tablet-lg {
     height: 406px;
   }
-  @include mobile {
+  @include tablet {
     height: 320px;
   }
   &.is-hidden {
