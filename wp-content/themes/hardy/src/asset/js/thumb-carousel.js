@@ -17,7 +17,7 @@ $(document).ready(() => {
       wrapAround: true,
       // lazyLoad: 2,
       prevNextButtons: false,
-      autoPlay: true,
+      autoPlay: false,
       draggable: false,
       pauseAutoPlayOnHover: false,
       imagesLoaded: true, 
