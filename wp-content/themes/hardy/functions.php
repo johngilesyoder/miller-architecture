@@ -117,11 +117,17 @@ function miller_conditional_scripts() {
     wp_enqueue_script('project'); // Enqueue it!
   }
 
-    // IF Community Page template
-    if ( is_page_template('template-community.php') ) {
-      wp_register_script('community', get_template_directory_uri() . '/dist/asset/js/community.js', array('jquery'), null, true);
-      wp_enqueue_script('community'); // Enqueue it!
-    }
+  // IF Community Page template
+  if ( is_page_template('template-community.php') ) {
+    wp_register_script('community', get_template_directory_uri() . '/dist/asset/js/community.js', array('jquery'), null, true);
+    wp_enqueue_script('community'); // Enqueue it!
+  }
+
+  // IF Community Page OR Studio template
+  if ( is_page('the-team') || is_page('community') ) {
+    wp_register_script('thumb-carousel', get_template_directory_uri() . '/dist/asset/js/thumb-carousel.js', array('jquery'), null, true);
+    wp_enqueue_script('thumb-carousel'); // Enqueue it!
+  }
 
 }
 
