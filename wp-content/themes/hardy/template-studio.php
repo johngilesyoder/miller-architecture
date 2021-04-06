@@ -1,6 +1,10 @@
 <?php /*Template Name: Studio */ get_header(); 
 $page_header = get_field( "page_custom_header" );
 $page_statement = get_field( "page_statement" );
+$candace_title = get_field( "block_title" );
+$candace_subtitle = get_field( "block_subtitle" );
+$candace_summary = get_field( "block_summary" );
+$candace_photo = get_field( "block_photo" );
 ?>
 
   <main role="main">
@@ -71,13 +75,13 @@ $page_statement = get_field( "page_statement" );
 
         <div class="content-block block-candace">
             <div class="block-photo-wrapper">
-              <div class="block-photo" style="background-image:url('<?php echo get_template_directory_uri(); ?>/dist/asset/img/candace.jpg');"></div>
+              <div class="block-photo" style="background-image:url('<?php echo esc_url($candace_photo['url']); ?>');"></div>
             </div>
             <div class="block-content">
-              <span class="block-subtitle">A Heartfelt Thank You to Our Founder</span>
-              <h2 class="block-title">Candace Tillotson-Miller</h2>
+              <span class="block-subtitle"><?php echo($candace_subtitle); ?></span>
+              <h2 class="block-title"><?php echo($candace_title); ?></h2>
               <div class="block-summary">
-                Maybe at one point, establishing Miller Architects in the high-end residential architectural community was a scary proposition, but those days are long behind Candace Tillotson-Miller. Her command of design and deep appreciation for the landscape and rhythm of the West saw to that. More than a quarter century after hanging out her shingle, she handed the reins to her longtime partners, Matt Miller and Joe Roodell, confident that the business she’d built was in the best of hands. “In over 15 years of working with Matt and Joe we have met challenges together as a team, supporting one another and adding to the foundation of the business in creating environments that go beyond expectations for clients.  They are smart, talented, dedicated and kind.” Anyone who knows Candace knows that her idea of “retirement” doesn’t involve slowing down – she simply shifted her focus to other pursuits. Painting. The ranch. And every so often, taking the time for a second cup of coffee.
+                <?php echo($candace_summary); ?>
               </div>
             </div>
           </div>
