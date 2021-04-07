@@ -38,28 +38,30 @@ $candace_photo = get_field( "block_photo" );
           <div class="content-block">
             <div class="block-photo-wrapper">
 
-            <?php if( have_rows('block_gallery') ): ?>
-              <div class="thumb-flickity-slider wrapper">
-                <div class="thumb-carousel">
-                  <?php while( have_rows('block_gallery') ): the_row();
-                    $thumb = get_sub_field('thumbnail_image');
-                  ?>
-                    <div class="gallery-cell" data-flickity-bg-lazyload="<?php echo esc_url($thumb['url']); ?>"></div>
-                  <?php endwhile; ?>
+              <?php if( have_rows('block_gallery') ): ?>
+                <div class="thumb-flickity-slider wrapper">
+                  <div class="thumb-carousel">
+                    <?php while( have_rows('block_gallery') ): the_row();
+                      $thumb = get_sub_field('thumbnail_image');
+                    ?>
+                      <div class="gallery-cell" data-flickity-bg-lazyload="<?php echo esc_url($thumb['url']); ?>"></div>
+                    <?php endwhile; ?>
+                  </div>
                 </div>
-              </div>
-            <?php elseif($photo) : ?>
-              <div class="block-photo" style="background-image:url('<?php echo esc_url($photo['url']); ?>');"></div>
-              <?php if($tertiary) : ?>
-                <div class="block-tertiary-info">
-                  <?php echo($tertiary); ?>
-                </div>
+                <?php if($tertiary) : ?>
+                  <div class="block-tertiary-info">
+                    <?php echo($tertiary); ?>
+                  </div>
+                <?php endif; ?>
+              <?php elseif($photo) : ?>
+                <div class="block-photo" style="background-image:url('<?php echo esc_url($photo['url']); ?>');"></div>
+                <?php if($tertiary) : ?>
+                  <div class="block-tertiary-info">
+                    <?php echo($tertiary); ?>
+                  </div>
+                <?php endif; ?>
               <?php endif; ?>
-            <?php endif; ?>
 
-
-
-              
             </div>
             <div class="block-content">
               <?php if( $title ): ?>
